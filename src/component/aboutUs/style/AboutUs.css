@@ -1,0 +1,186 @@
+/* ================= ABOUT US SECTION STYLES ================= */
+
+:root {
+  --defult-color: #fff;
+  --primary-color: #000;
+  --secondary-color: #097877;
+  --tertiary-color: #6ccdbf;
+  --input-bg: #212343;
+  --section-bg: #dbf7f3;
+  --sec-hdr-color: #054645;
+  --roboto: "Roboto", sans-serif;
+  --design-bg: #6dcec0;
+}
+
+/* Breadcrumb Header */
+.about-about-hdr {
+  padding-block: 26px 27px;
+  background: var(--secondary-color);
+}
+
+.brdcrumb {
+  font-size: 20px;
+  color: var(--defult-color);
+  text-decoration: none;
+}
+
+/* Main Section Wrapper */
+.about-about-wrpr {
+  padding: 70px 0;
+  background: var(--section-bg);
+}
+
+/* Image Wrapper with Background Box */
+.about-about-img-wrpr {
+  max-width: 536px;
+  background-color: #89ebe1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 1px; /* Slight padding to show the teal box */
+}
+
+.about-about-img {
+  position: relative;
+  max-width: 472px;
+}
+
+.about-about-img > img {
+  margin-block: 32px -17px;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Floating Card 1: 200+ Video Courses */
+.about-about-img-rec1 {
+  max-width: 220px;
+  position: absolute;
+  left: -112px;
+  top: 113px;
+  border-radius: 15px;
+  background: var(--defult-color);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 19px 16px;
+  z-index: 2;
+}
+
+.about-about-img-rec1 img {
+  width: 50px;
+  height: 50px;
+  margin-right: 17px;
+}
+
+.about-about-img-rec1 .sec-top {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+/* Floating Card 2: Tutor Profile */
+.about-about-img-rec2 {
+  max-width: 180px;
+  position: absolute;
+  right: -99px;
+  bottom: -44px;
+  border-radius: 15px;
+  background: var(--defult-color);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 18px 20px 14px;
+  z-index: 2;
+}
+
+.about-about-img-rec2 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Content Area */
+.about-about-heading {
+  margin-bottom: 21px;
+}
+
+.sec-top {
+  color: var(--sec-hdr-color);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-about-cntn p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--input-bg);
+  margin-bottom: 40px;
+}
+
+/* Feature Boxes Grid */
+.features-box {
+  background: #f1f1f1;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  min-height: 100px;
+}
+
+.features-box:hover {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.features-box img {
+  width: 45px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.feature-cntn p {
+  font-size: 14px;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Read More Button */
+.section-btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.section-btn:hover {
+  background-color: var(--sec-hdr-color);
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE QUERIES ================= */
+
+@media (max-width: 1200px) {
+  .about-about-img-rec1 { left: -50px; }
+  .about-about-img-rec2 { right: -50px; }
+}
+
+@media (max-width: 991px) {
+  .about-about-img-rec1, .about-about-img-rec2 {
+    position: static;
+    margin: 20px auto;
+  }
+  .about-about-img-wrpr {
+    max-width: 100%;
+  }
+  .about-about-heading {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .about-about-cntn p {
+    text-align: center;
+  }
+}
