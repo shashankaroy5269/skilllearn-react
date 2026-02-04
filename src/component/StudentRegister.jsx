@@ -53,7 +53,7 @@ const StudentRegister = () => {
     };
 
     try {
-      setLoading(true); // 🔥 SHOW LOADER
+      setLoading(true); 
 
       const res = await AxiosInstance.post(
         endPoints.auth.signUp,
@@ -67,7 +67,7 @@ const StudentRegister = () => {
     } catch (error) {
       alert(error.response?.data?.message || "Server error");
     } finally {
-      setLoading(false); // 🔥 HIDE LOADER
+      setLoading(false); 
     }
 
   };

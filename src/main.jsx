@@ -13,6 +13,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import "./style/index.css";
 import "./style/about.css";
+import "./index.css";   
+
+
 // import "./style/course.css";
 // import "./style/quiz.css";
 // import "./style/modal.css";

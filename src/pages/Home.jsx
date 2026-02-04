@@ -8,10 +8,14 @@ import ViewSection from "../component/viewSection.jsx";
 import FeedbackSection from "../component/feedbackSection.jsx";
 import BlogSection from "../component/blogSection.jsx";
 import LandingAutoScroll from "../component/autoscrollSection.jsx";
+import BackToTop from "../component/backtoTop.jsx";
+
 
 const Home = () => {
+  
   return (
     <>
+    <BackToTop/>
       <Banner />
       <AboutSection />
       <CourseSection />
