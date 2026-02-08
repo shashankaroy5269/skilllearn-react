@@ -8,14 +8,14 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
 
-          {/* ===== LOGO ===== */}
+          {/* LOGO */}
           <div className="nav-logo">
             <Link className="navbar-brand" to="/">
               <img src={logo} alt="Logo" />
             </Link>
           </div>
 
-          {/* ===== TOGGLER ===== */}
+          {/*  TOGGLER  */}
           <button
             className="navbar-toggler ms-auto"
             type="button"
@@ -28,7 +28,7 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* ===== OFFCANVAS ===== */}
+          {/*  OFFCANVAS */}
           <div
             className="offcanvas offcanvas-end align-items-center"
             id="navbarSupportedContent"
@@ -41,7 +41,7 @@ const Header = () => {
               <i className="fa-solid fa-xmark"></i>
             </button>
 
-            {/* ===== MENU ===== */}
+            {/*  MENU  */}
             <ul className="navbar-nav mx-auto">
 
               <li className="nav-item">

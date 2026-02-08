@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style/AboutUs.css";
 
-// Images ko import karna React mein best practice hai (taaki production build mein path na toote)
+
 import Feature1 from "../../assets/AboutUsPage/Feature-box1.png";
 import Feature2 from "../../assets/AboutUsPage/Feature-box2.png";
 import Feature3 from "../../assets/AboutUsPage/Feature-box3.png";
@@ -11,7 +11,7 @@ import PlayBtn from "../../assets/AboutUsPage/Play-btn.png";
 import TutorThumb from "../../assets/AboutUsPage/About-rec-img.png";
 
 const AboutUs = () => {
-  // 1. Features state for API readiness
+  
   const [features] = useState([
     { id: 1, title: "Offline Courses", img: Feature1 },
     { id: 2, title: "Online Courses", img: Feature2 },
@@ -30,7 +30,7 @@ const AboutUs = () => {
     <main>
      
     <section className="about-about-sec">
-      {/* Breadcrumb Header */}
+      
       <div className="about-about-hdr">
         <div className="container">
           <ul className="list-unstyled d-flex mb-0">
@@ -43,13 +43,13 @@ const AboutUs = () => {
       <div className="about-about-wrpr">
         <div className="container">
           <div className="row align-items-center">
-            {/* Left Side: Main Image and Floating Cards */}
+            
             <div className="col-12 col-lg-7">
               <div className="about-about-img-wrpr">
                 <div className="about-about-img mx-auto">
                   <img src={AboutMainImg} alt="Student" />
                   
-                  {/* Floating Box 1: Stats */}
+                  
                   <div className="about-about-img-rec1 d-flex align-items-center">
                     <img src={PlayBtn} alt="Play" />
                     <div className="rec1-cntn">
@@ -58,7 +58,7 @@ const AboutUs = () => {
                     </div>
                   </div>
 
-                  {/* Floating Box 2: Tutor Profile */}
+                 
                   <div className="about-about-img-rec2 text-center">
                     <img src={TutorThumb} alt="Tutor" />
                     <div className="rec-hdr fw-semibold">{stats.tutorName}</div>
@@ -80,7 +80,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Right Side: Text and Grid */}
+            
             <div className="col-12 col-lg-5">
               <div className="about-about-cntn">
                 <div className="about-about-heading">

@@ -1,6 +1,6 @@
 import React from "react";
 
-// ===== IMAGES =====
+
 import course1 from "../assets/LandingPage/Course-img1.png";
 import course2 from "../assets/LandingPage/Course-img2.png";
 import course3 from "../assets/LandingPage/Course-img3.png";
@@ -58,14 +58,14 @@ const CourseSection = () => {
     <section className="course-sec">
       <div className="container">
 
-        {/* ===== HEADER ===== */}
+        {/*  HEADER  */}
         <div className="course-hdr mx-auto text-center">
           <h2 className="sec-hdr fw-semibold">
             Choose Favourite Course from Top Category
           </h2>
         </div>
 
-        {/* ===== COURSE CARDS ===== */}
+        {/*  COURSE CARDS  */}
         <div className="course-cntn">
           <div className="row">
 

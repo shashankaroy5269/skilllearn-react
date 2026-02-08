@@ -36,14 +36,14 @@ const StudyChart = ({ activeData, goalData }) => {
         datasets: [
           {
             label: "Active",
-            data: activeData,          // 🔥 CHANGED
+            data: activeData,          
             backgroundColor: "#6CCDBF",
             barThickness: 22,
             borderRadius: 6,
           },
           {
             label: "Goal",
-            data: goalData,            // 🔥 CHANGED
+            data: goalData,           
             backgroundColor: "#D9D9D9",
             barThickness: 22,
             borderRadius: 6,
@@ -75,14 +75,14 @@ const StudyChart = ({ activeData, goalData }) => {
     });
 
     return () => {
-      chartRef.current?.destroy();    // 🔥 FIXED
+      chartRef.current?.destroy();    
     };
-  }, [activeData, goalData]);         // 🔥 FIXED
+  }, [activeData, goalData]);         
 
-  // 🔥 CANVAS MUST EXIST
+  
   return (
     <canvas
-      ref={canvasRef}                // 🔥 FIXED (id না, ref)
+      ref={canvasRef}                
       style={{ height: "260px", width: "100%" }}
     />
   );

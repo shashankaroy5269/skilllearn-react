@@ -31,8 +31,7 @@ function App() {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // loader time (change if needed)
-
+    }, 3000); 
     return () => clearTimeout(timer);
   }, [location]);
   return (<>

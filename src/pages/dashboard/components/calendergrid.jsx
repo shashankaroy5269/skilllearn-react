@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 const CalendarGrid = () => {
   const [currentMonth, setCurrentMonth] = useState(dayjs());
 
-  // get month range
+  
   const startDay = currentMonth.startOf("month").startOf("week");
   const endDay = currentMonth.endOf("month").endOf("week");
 
@@ -16,7 +16,7 @@ const CalendarGrid = () => {
     day = day.add(1, "day");
   }
 
-  // color logic (demo – later API diye replace korte parbi)
+  
   const getDateClass = (date) => {
     if (!date.isSame(currentMonth, "month")) return "classColor4";
 

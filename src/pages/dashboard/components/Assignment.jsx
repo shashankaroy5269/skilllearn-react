@@ -20,7 +20,7 @@ const AssignmentDashboard = () => {
                             <Sidebar />
                         </div>
 
-                        {/* ===================== MAIN CONTENT START ===================== */}
+                        {/*  MAIN CONTENT */}
                         <div className="col-10">
                             <div className="dashboard-top bg-white d-flex align-items-center">
                                 <div className="dashboard-hdr d-flex align-items-center justify-content-between flex-wrap w-100">
@@ -147,7 +147,7 @@ const AssignmentDashboard = () => {
                                 </div>
                             </div>
 
-                            {/* ===================== ASSIGNMENT STATS ===================== */}
+                            {/*  ASSIGNMENT STATS */}
                             <div className="assignment-grid">
                                 <div className="common-box d-flex align-items-center gap-3">
                                     <div className="assignment-icon">

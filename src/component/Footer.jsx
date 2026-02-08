@@ -1,6 +1,6 @@
 import React from "react";
 
-// image imports
+
 import ftrEclipse from "../assets/CommonAssets/Ftr-eclipse.png";
 import ftrImg from "../assets/CommonAssets/Ftr-img.png";
 

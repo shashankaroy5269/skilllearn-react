@@ -1,6 +1,6 @@
 import React from "react";
 
-// ===== IMAGES =====
+
 import view1 from "../assets/LandingPage/View-img1.png";
 import view2 from "../assets/LandingPage/View-img2.png";
 import view3 from "../assets/LandingPage/View-img3.png";
@@ -28,7 +28,7 @@ const ViewSection = () => {
     <section className="view-sec">
       <div className="container">
 
-        {/* ===== HEADER ===== */}
+        {/* HEADER */}
         <div className="view-hdr text-center">
           <div className="sec-hdr fw-semibold">
             What our Students are viewing
@@ -36,7 +36,7 @@ const ViewSection = () => {
           <p>Explore all of our course and pick your suitable one to enroll</p>
         </div>
 
-        {/* ===== CARDS ===== */}
+        {/* CARDS  */}
         <div className="view-cntn">
           <div className="row">
 
@@ -112,7 +112,7 @@ const ViewSection = () => {
           </div>
         </div>
 
-        {/* ===== BUTTON ===== */}
+        {/*BUTTON*/}
         <div className="view-btn text-center">
           <a href="#" className="btn-secondary section-btn">
             Read More

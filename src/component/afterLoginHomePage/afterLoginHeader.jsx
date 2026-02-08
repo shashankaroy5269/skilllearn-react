@@ -10,7 +10,7 @@ function AfterLoginHeader() {
 const [open, setOpen] = useState(false);
 const dropdownRef = useRef(null);
 
-// outside click close
+
 useEffect(() => {
   const handler = (e) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -27,14 +27,14 @@ useEffect(() => {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
 
-          {/* ===== LOGO ===== */}
+          
           <div className="nav-logo">
             <Link className="navbar-brand" to="/">
               <img src={logo} alt="Logo" />
             </Link>
           </div>
 
-          {/* ===== TOGGLER ===== */}
+         
           <button
             className="navbar-toggler ms-auto"
             type="button"
@@ -44,7 +44,7 @@ useEffect(() => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* ===== OFFCANVAS ===== */}
+          
           <div
             className="offcanvas offcanvas-end align-items-center"
             id="navbarSupportedContent"
@@ -56,7 +56,7 @@ useEffect(() => {
               <i className="fa-solid fa-xmark"></i>
             </button>
 
-            {/* ===== MENU ===== */}
+           
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
@@ -98,13 +98,13 @@ useEffect(() => {
               </li>
             </ul>
 
-            {/* ===== USER ICON DROPDOWN ===== */}
+            
             
 <li
   ref={dropdownRef}
-  className="position-relative user-nav"   // 👈 left control এখানেই
+  className="position-relative user-nav"   
 >
-  {/* USER ICON */}
+  
   <button
     type="button"
     className="user-btn rounded-circle"
@@ -113,7 +113,7 @@ useEffect(() => {
     <img src={userIcon} alt="user" />
   </button>
 
-  {/* DROPDOWN */}
+ 
   {open && (
     <div className="user-dropdown">
       <Link

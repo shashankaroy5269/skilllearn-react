@@ -1,23 +1,14 @@
 
 import React from "react";
 
-// /* =======================
-//    DASHBOARD / COMMON
-// ======================= */
-// import logoIcon from "../../../assets/dashboard-assets/logo-icon.png";
+
 import userIcon from "../../../assets/dashboard-assets/user-icon.png";
 
-/* =======================
-   LIVE COURSE VIDEOS
-======================= */
 import liveCourseImg1 from "../../../assets/dashboard-assets/live-courses/live-course-img1.png";
 import liveCourseImg2 from "../../../assets/dashboard-assets/live-courses/live-course-img2.png";
 import liveCourseImg3 from "../../../assets/dashboard-assets/live-courses/live-course-img3.png";
 import liveCourseImg4 from "../../../assets/dashboard-assets/live-courses/live-course-img4.png";
 import Sidebar from "./sidebar";
-/* =======================
-   PARTICIPANTS / CHAT
-======================= */
 import greyUserImg from "../../../assets/dashboard-assets/live-courses/Grey-img1.png";
 
 function LiveClass() {

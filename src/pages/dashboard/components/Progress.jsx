@@ -24,12 +24,12 @@ const Progress = () => {
   //     try {
   //       const res = await AxiosInstance.get("/dashboard/progress");
 
-  //       console.log("PROGRESS API RESPONSE 👉", res.data);
+  //       console.log("PROGRESS API RESPONSE ", res.data);
 
   //       setData(res.data.data);
   //       setLoading(false);
   //     } catch (err) {
-  //       console.error("PROGRESS API ERROR 👉", err.response?.data);
+  //       console.error("PROGRESS API ERROR ", err.response?.data);
 
   //       if (err.response?.status === 401) {
   //         localStorage.removeItem("token");
@@ -59,12 +59,12 @@ const Progress = () => {
       <section className="dashboard">
         <div className="container">
           <div className="row align-items-stretch">
-            {/* --- SIDEBAR --- */}
+            {/* SIDEBAR*/}
             <div className="col-2">
               <Sidebar />
             </div>
 
-            {/* --- MAIN HEADER & CONTENT --- */}
+            {/* MAIN HEADER & CONTENT */}
             <div className="col-10">
                <div className="dashboard-top bg-white d-flex align-items-center">
                                               <div className="dashboard-hdr d-flex align-items-center justify-content-between flex-wrap w-100">
@@ -354,51 +354,11 @@ const Progress = () => {
                           </div>
                         </div>
 
-                        {/* BOTTOM */}
+                        
                         <div className="skill-box-btm d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
-                          {/* IT SKILL */}
+                          
                           <div className="skill-btm-left d-flex align-items-center">
-                            {/* <svg
-      width={30}
-      height={30}
-      viewBox="0 0 30 30"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
-      <rect width={30} height={30} rx={5} fill="#097877" />
-
-      <rect
-        x={6}
-        y={6}
-        width={18}
-        height={18}
-        fill="url(#pattern0_4699_4065)"
-      />
-
-      <defs>
-        <pattern
-          id="pattern0_4699_4065"
-          patternContentUnits="objectBoundingBox"
-          width={1}
-          height={1}
-        >
-          <use
-            xlinkHref="#image0_4699_4065"
-            transform="scale(0.00195312)"
-          />
-        </pattern>
-
-        <image
-          id="image0_4699_4065"
-          width={512}
-          height={512}
-          preserveAspectRatio="none"
-          xlinkHref="data:image/png;base64,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"
-        />
-      </defs>
-    </svg> */}
-
+                           
                             <ProgressSvg />
 
                             <p>IT Skill</p>
@@ -417,7 +377,7 @@ const Progress = () => {
                             </div>
                           </div>
 
-                          {/* NON-IT SKILL */}
+                          
                           <div className="skill-btm-right d-flex align-items-center">
 
                             <ProgressSvg />

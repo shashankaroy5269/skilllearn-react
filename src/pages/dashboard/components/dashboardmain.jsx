@@ -3,12 +3,8 @@
 
 import { useEffect, useState } from "react";
 
-
 import userIcon from "../../../assets/dashboard-assets/user-icon.png";
-
-
 import dashboardImg from "../../../assets/dashboard-assets/dashboard-img.png";
-
 
 import mentor1 from "../../../assets/dashboard-assets/mentor1.png";
 import mentor2 from "../../../assets/dashboard-assets/mentor2.png";
@@ -73,7 +69,7 @@ const DashboardMain = () => {
                             <Sidebar />
                         </div>                    
 
-                        {/* ================= RIGHT CONTENT START ================= */}
+                        {/* RIGHT CONTENT  */}
                         <div className="col-10">
                             <div className="dashboard-top bg-white d-flex align-items-center">
                                 <div className="dashboard-hdr d-flex align-items-center justify-content-between flex-wrap w-100">
@@ -202,9 +198,9 @@ const DashboardMain = () => {
                                 </div>
                             </div>
 
-                            {/* ================= DASHBOARD GRID START ================= */}
+                            {/*  DASHBOARD GRID   */}
                             <div className="dashboard-grid">
-                                {/* ================= BOX 1 ================= */}
+                                {/*BOX 1 */}
                                 <div className="common-box box-1">
                                     <h2 className="title3 text-capitalize">fundamentals</h2>
 
@@ -344,7 +340,7 @@ const DashboardMain = () => {
                                     </div>
                                 </div>
 
-                                {/* ================= BOX 2 ================= */}
+                                {/* BOX 2 */}
                                 <div className="common-box box-2">
                                     <div className="progress-cntn d-flex align-items-center justify-content-between">
                                         <h2 className="title3">Progress</h2>
@@ -366,7 +362,7 @@ const DashboardMain = () => {
                                     </ul>
                                 </div>
 
-                                {/* ================= BOX 3 ================= */}
+                                {/*  BOX 3  */}
                                 <div className="common-box box-3">
                                     <h2 className="title3">Activity</h2>
                                     <p>
@@ -384,7 +380,7 @@ const DashboardMain = () => {
                                     </div>
                                 </div>
 
-                                {/* ================= BOX 4 ================= */}
+                                {/*  BOX 4 */}
                                 <div className="common-box box-4">
                                     <h2 className="title2">Keep learning new thing everyday</h2>
 
@@ -404,26 +400,8 @@ const DashboardMain = () => {
 
                                     </div>
                                 </div>
-                                {/* ================= BOX 5 ================= */}
-                                {/* <div className="common-box box-5">
-                                    <h2 className="title2 mb-3">Study Statistic</h2>
-
-                                    <select
-                                        className="box5-dropdown weak-dropdown"
-                                        value={studyFilter}
-                                        onChange={(e) => setStudyFilter(e.target.value)}
-                                    >
-                                        <option value="Weekly">Weekly</option>
-                                        <option value="Monday">Monday</option>
-                                    </select>
-
-                                    <div className="bar-chart">
-                                        <StudyChart
-                                            activeData={activeData}
-                                            goalData={goalData}
-                                        />
-                                    </div>
-                                </div> */}
+                                {/*  BOX 5 */}
+                                
                                 <div className="common-box box-5">
                                     <h2 className="title2 mb-3">Study Statistic</h2>
 
@@ -447,7 +425,7 @@ const DashboardMain = () => {
                                     </div>
                                 </div>
 
-                                {/* ================= BOX 6 ================= */}
+                                {/* BOX 6  */}
                                 <div className="common-box box-6">
                                     <h2 className="title2">Learning Progress</h2>
 
@@ -472,7 +450,7 @@ const DashboardMain = () => {
                                             <p>Compared to last month</p>
                                         </div>
 
-                                        {/* 🔥 INLINE SVG GAUGE */}
+                                        
                                         <div className="gauge-wrapper">
                                             <svg viewBox="0 0 260 140" width="100%" height="140">
                                                 <path d="M30 130 A100 100 0 0 1 70 50" stroke="#22c55e" strokeWidth="18" fill="none" />
@@ -495,7 +473,7 @@ const DashboardMain = () => {
                                     </div>
                                 </div>
 
-                                {/* ================= BOX 7 ================= */}
+                                {/*  BOX 7 */}
                                 <div className="common-box box-7">
                                     <h2 className="title2">Top Mentors</h2>
 
@@ -530,9 +508,9 @@ const DashboardMain = () => {
                                 </div>
 
                             </div>
-                            {/* ================= DASHBOARD GRID END ================= */}
+                            {/*  DASHBOARD GRID END */}
                         </div>
-                        {/* ================= RIGHT CONTENT END ================= */}
+                        {/* RIGHT CONTENT END  */}
 
                     </div>
                 </div>

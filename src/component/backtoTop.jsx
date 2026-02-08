@@ -5,7 +5,7 @@ const BackToTop = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      setShow(window.scrollY > 300); // show after 300px scroll
+      setShow(window.scrollY > 300); 
     };
 
     window.addEventListener("scroll", onScroll);

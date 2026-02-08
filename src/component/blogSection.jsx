@@ -1,6 +1,6 @@
 import React from "react";
 
-// IMAGES (add actual paths as per your project)
+
 import blogBigImg from "../assets/LandingPage/Blog-img1.png";
 import blogSmall1 from "../assets/LandingPage/Blog-img2.png";
 import blogSmall2 from "../assets/LandingPage/Blog-img3.png";

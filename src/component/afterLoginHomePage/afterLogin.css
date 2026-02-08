@@ -1,10 +1,10 @@
-/* icon button */
+
 
 
 .user-nav {
   transform: translateX(-200px);   
 }
-/* ===== USER DROPDOWN ===== */
+/* USER DROPDOWN */
 .user-dropdown {
   position: absolute;
   top: 58px;

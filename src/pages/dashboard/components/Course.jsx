@@ -1,23 +1,18 @@
 import React, { useState } from "react";
-// import axios from "axios";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-// ===== DASHBOARD COMMON =====
 
 import userIcon from "../../../assets/dashboard-assets/user-icon.png";
-
-// ===== MENTOR IMAGES =====
 import mentor1 from "../../../assets/dashboard-assets/mentor1.png";
 import mentor2 from "../../../assets/dashboard-assets/mentor2.png";
 import mentor3 from "../../../assets/dashboard-assets/mentor3.png";
 import mentor4 from "../../../assets/dashboard-assets/mentor4.png";
 import mentor5 from "../../../assets/dashboard-assets/mentor5.png";
 import mentor6 from "../../../assets/dashboard-assets/mentor6.png";
-
-
 import swiperImg1 from "../../../assets/dashboard-assets/dashboard-course/swiperImg1.png";
 import swiperImg2 from "../../../assets/dashboard-assets/dashboard-course/swiperImg2.png";
 import swiperImg3 from "../../../assets/dashboard-assets/dashboard-course/swiperImg3.png";

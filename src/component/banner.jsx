@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// IMAGE IMPORTS
+
 import bannerGif from "../assets/LandingPage/banner-gif.gif";
 import bannerGif2 from "../assets/LandingPage/banner-gif2.gif";
 
@@ -22,26 +22,11 @@ import bannerImg6 from "../assets/LandingPage/banner-img6.png";
 
 import plusImg from "../assets/LandingPage/Plus.png";
 
-// import polygon1 from "../assets/LandingPage/Polygon1.png";
-// import polygon2 from "../assets/LandingPage/Polygon2.png";
-// import polygon3 from "../assets/LandingPage/Polygon3.png";
 
 const Banner = () => {
   return (
     <section className="banner-sec">
-      {/* POLYGON BACKGROUND
-      <div className="bgPolygon bgPolygon1">
-        <img src={polygon1} alt="Polygon 1" />
-      </div>
- */}
-
-      {/* <div className="bgPolygon bgPolygon2">
-        <img src={polygon2} alt="Polygon 2" />
-      </div>
-
-      <div className="bgPolygon bgPolygon3">
-        <img src={polygon3} alt="Polygon 3" />
-      </div> */}
+      
       <div className="blur-circle-1"></div>
 
       <div className="container">

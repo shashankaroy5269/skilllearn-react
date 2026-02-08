@@ -1,6 +1,6 @@
 import React from "react";
 
-// Import images
+
 import aboutImg1 from "../assets/LandingPage/About-img1.png";
 import aboutImg2 from "../assets/LandingPage/About-img2.png";
 import aboutDesign3 from "../assets/LandingPage/About-design3.png";

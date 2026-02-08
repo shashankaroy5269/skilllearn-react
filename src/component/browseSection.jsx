@@ -1,6 +1,6 @@
 import React from "react";
 
-// ===== IMAGES =====
+
 import card1 from "../assets/LandingPage/Browse-card-img1.png";
 import card2 from "../assets/LandingPage/Browse-card-img2.png";
 import card3 from "../assets/LandingPage/Browse-card-img3.png";
@@ -29,7 +29,7 @@ const BrowseSection = () => {
     <section className="browse-sec">
       <div className="container">
 
-        {/* ===== TOP SECTION ===== */}
+        {/*TOP SECTION  */}
         <div className="browse-top">
           <div className="row align-items-center">
 
@@ -81,7 +81,7 @@ const BrowseSection = () => {
                         <rect x="14" y="14" width="28" height="28" fill="white" />
                       </mask>
 
-                      {/* ICON — shifted DOWN by 1.5px */}
+                     
                       <g mask="url(#mask0)" transform="translate(0 1.5)">
                         <path
                           d="M40.5 38.5L33.5 31.5M35 26C35 31.5228 30.5228 36 25 36C19.4772 36 15 31.5228 15 26C15 20.4772 19.4772 16 25 16C30.5228 16 35 20.4772 35 26Z"
@@ -102,7 +102,7 @@ const BrowseSection = () => {
           </div>
         </div>
 
-        {/* ===== COURSE CARDS ===== */}
+        {/* COURSE CARDS */}
         <div className="browse-cntn">
           <div className="row">
 
@@ -194,7 +194,7 @@ const BrowseSection = () => {
 
           </div>
 
-          {/* ===== SEE ALL BUTTON ===== */}
+          {/* SEE ALL BUTTON  */}
           <div className="browse-cntn-btn text-center">
             <a href="#" className="btn-secondary section-btn">
               See all courses

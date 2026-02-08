@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 
-/* ===== SWIPER CSS ===== */
+
 import "swiper/css";
 
-/* ===== IMAGES ===== */
+
 import feedbackImg from "../assets/LandingPage/feedback-card-img.png";
 
 import eclipse1 from "../assets/LandingPage/Feed-eclipse1.png";
@@ -22,7 +22,7 @@ const FeedbackSection = () => {
   return (
     <section className="feedback-sec position-relative">
 
-      {/* ===== BACKGROUND ELEMENTS ===== */}
+      {/*  BACKGROUND ELEMENTS  */}
       <div className="feedback-eclipses d-none d-lg-block">
         <div className="feedback-eclipse1 position-absolute">
           <img src={eclipse1} alt="" />
@@ -68,12 +68,12 @@ const FeedbackSection = () => {
               spaceBetween={20}
               loop={true}
               autoplay={{
-                delay: 2500,          // 2.5 sec
+                delay: 2500,          
                 disableOnInteraction: false,
               }}
               className="cardSwiper"
             >
-              {/* ===== SLIDE 1 ===== */}
+              {/*  SLIDE 1 */}
               <SwiperSlide>
                 <div className="feed-top d-flex align-items-center">
                   <ul className="stars d-flex p-0 m-0">
@@ -111,7 +111,7 @@ const FeedbackSection = () => {
                 </div>
               </SwiperSlide>
 
-              {/* ===== SLIDE 2 ===== */}
+              {/*  SLIDE 2  */}
               <SwiperSlide>
                 <div className="feed-top d-flex align-items-center">
                   <ul className="stars d-flex p-0 m-0">
@@ -149,7 +149,7 @@ const FeedbackSection = () => {
                 </div>
               </SwiperSlide>
 
-              {/* ===== SLIDE 3 ===== */}
+              {/* SLIDE 3  */}
               <SwiperSlide>
                 <div className="feed-top d-flex align-items-center">
                   <ul className="stars d-flex p-0 m-0">
