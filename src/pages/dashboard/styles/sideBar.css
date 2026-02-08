@@ -1,0 +1,18 @@
+.dashboard-navbar .title2 {
+  font-size: 22px !important;   
+  font-weight: 600;
+}
+.list-link {
+  display: flex;
+  align-items: center;
+}
+
+.list-link .titles {
+  margin-left: 10px;   /* যতটা ডানদিকে চাও */
+}
+
+@media (max-width: 576px) {
+  .dashboard-navbar .title2 {
+    font-size: 13px;
+  }
+}

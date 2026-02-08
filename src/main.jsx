@@ -27,6 +27,8 @@ import "./pages/dashboard/styles/calender_dashboard.css";
 import "./pages/dashboard/styles/live-course_dashboard.css";
 import "./pages/dashboard/styles/progress_dashboard.css";
 import "./pages/dashboard/styles/studyChart.css";
+import "./pages/dashboard/styles/sideBar.css";
+import "./pages/dashboard/styles/dashbarNav.css";
 
 
 

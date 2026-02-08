@@ -1,4 +1,10 @@
-/* ================= ROOT ================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--roboto) !important;
+   
+}
 :root {
   --primary-color: #100f0f;
   --secondary-color: #097877;
@@ -9,7 +15,7 @@
   --p-18px: clamp(1rem, 0.95rem + 0.6vw, 1.286rem);
 }
 
-/* ================= COMMON ================= */
+
 .common-box {
   margin-top: 20px;
 }

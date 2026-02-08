@@ -65,7 +65,8 @@ const Header = () => {
 
 
               <li className="nav-item dropdown">
-                <a
+                <Link
+            
                   className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
@@ -73,19 +74,8 @@ const Header = () => {
                   aria-expanded="false"
                 >
                   Quiz
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/quiz/html">
-                      HTML Quiz
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/quiz/react">
-                      React Quiz
-                    </Link>
-                  </li>
-                </ul>
+                </Link>
+                
               </li>
 
               <li className="nav-item">
@@ -100,7 +90,7 @@ const Header = () => {
             <div className="nav-btn d-flex align-items-center ms-auto">
 
               <Link to="/login" className="btn-primary">
-                sign in
+                Sign In
               </Link>
 
 

@@ -24,6 +24,7 @@ body {
   --section-bg: #dbf7f3;
   --roboto: "Roboto", sans-serif;
   --sec-hdr-color: #054645;
+  
 }
 
 h1,
@@ -504,8 +505,10 @@ ul {
   display: none;
 }
 
-.nav-btn>.btn-primary {
+.nav-btn .btn-primary,
+.nav-btn .btn-secondary {
   margin-right: 7px;
+  color: #fff !important;
 }
 /* Banner Section */
 .banner-sec {

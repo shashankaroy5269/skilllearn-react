@@ -9,8 +9,8 @@ import { endPoints } from "../../api/endPoints/endPoints";
 import regModalImg from "../assets/TeacherRegistration/Reg-modal-img1.png";
 import logoImg from "../assets/TeacherRegistration/Logo.png";
 import langImg from "../assets/CommonAssets/Lang-img.png";
-import loaderLogo from "../assets/CommonAssets/Loader-logo.png";
-import loaderText from "../assets/CommonAssets/loader-txt.png";
+// import loaderLogo from "../assets/CommonAssets/Loader-logo.png";
+// import loaderText from "../assets/CommonAssets/loader-txt.png";
 
 
 //  VALIDATION SCHEMA
@@ -25,7 +25,7 @@ const schema = yup.object().shape({
     .string()
     .oneOf([yup.ref("password")], "Passwords do not match")
     .required("Confirm password is required"),
-  terms: yup.boolean().oneOf([true], "Accept terms & conditions"),
+  terms: yup.boolean().oneOf([true],),
 });
 
 const StudentRegister = () => {
@@ -66,7 +66,8 @@ const StudentRegister = () => {
 
     } catch (error) {
       alert(error.response?.data?.message || "Server error");
-    } finally {
+    } 
+    finally {
       setLoading(false); 
     }
 
@@ -74,27 +75,7 @@ const StudentRegister = () => {
 
   return (
     <main>
-      {loading && (
-        <div className="loader-overlay">
-          <div className="loader-content">
-            <img
-              src={loaderLogo}
-              className="loader-text-img"
-              alt="Loading"
-            />
-
-            <img
-              src={loaderText}
-              className="loader-logo-img"
-              alt="Please wait"
-            />
-
-            <span className="loader-line"></span>
-          </div>
-        </div>
-      )}
-
-      <section>
+     <section>
         <div className="about-about-hdr">
           <div className="container">
             <ul className="list-unstyled d-flex">

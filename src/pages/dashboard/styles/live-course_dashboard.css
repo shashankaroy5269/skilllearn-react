@@ -19,7 +19,11 @@
   --p-16px: clamp(1rem, 0.95rem + 0.4vw, 1.143rem);
 }
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: var(--roboto) !important;
+  
 }
 .col70 {
   width: 72%;
