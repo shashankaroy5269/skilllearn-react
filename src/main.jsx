@@ -16,9 +16,7 @@ import "./style/about.css";
 import "./index.css";   
 
 
-// import "./style/course.css";
-// import "./style/quiz.css";
-// import "./style/modal.css";
+
 import "./style/register.css";
 import "./style/studentRegister.css";
 import "./style/teacherRegistration.css";
@@ -28,6 +26,8 @@ import "./pages/dashboard/styles/assignment_dashboard.css";
 import "./pages/dashboard/styles/calender_dashboard.css";
 import "./pages/dashboard/styles/live-course_dashboard.css";
 import "./pages/dashboard/styles/progress_dashboard.css";
+import "./pages/dashboard/styles/studyChart.css";
+
 
 
 

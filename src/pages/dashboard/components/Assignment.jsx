@@ -1,20 +1,15 @@
 import React from "react";
 
 
-
-import logoIcon from "../../../assets/dashboard-assets/logo-icon.png";
 import userIcon from "../../../assets/dashboard-assets/user-icon.png";
-
+import Sidebar from "./sidebar";
 
 const AssignmentDashboard = () => {
-    
-    const clickClose = () => {
-        console.log("close sidebar");
-    };
 
-    const hamberger = () => {
-        console.log("hamburger clicked");
-    };
+   const hamberger = () => {
+    document.querySelector(".left-sideNav")?.classList.toggle("open");
+  };
+
 
     return (
         <main>
@@ -22,215 +17,7 @@ const AssignmentDashboard = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-2">
-                            <aside className="left-sideNav bg-white z-3">
-                                <button className="close-btn" onClick={clickClose}>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width={24}
-                                        height={24}
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"
-                                        />
-                                    </svg>
-
-                                </button>
-
-                                <nav className="navBar">
-                                    <div className="brand-logo">
-                                        <img src={logoIcon} alt="logo" />
-                                    </div>
-
-                                    <div className="dashboard-navbar">
-                                        <h2 className="title2 text-uppercase">
-                                            Student Dashboard
-                                        </h2>
-
-                                        <div className="dashboardNav-list">
-                                            <h3 className="title3">MAIN MENU</h3>
-
-                                            <ul className="nav-item">
-                                                <li className="item-list">
-                                                    <a
-                                                        href="main_dashboard.html"
-                                                        className="list-link"
-                                                    >
-                                                        <span className="icons">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <path
-                                                                    fill="currentColor"
-                                                                    d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6z"
-                                                                />
-                                                            </svg>
-                                                        </span>
-                                                        <span className="titles">Dashboard</span>
-                                                    </a>
-                                                </li>
-
-                                                <li className="item-list">
-                                                    <a
-                                                        href="course_dashboard.html"
-                                                        className="list-link"
-                                                    >
-                                                        <span className="icons">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <path
-                                                                    fill="currentColor"
-                                                                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z"
-                                                                />
-                                                            </svg>
-                                                        </span>
-                                                        <span className="titles">My Course</span>
-                                                    </a>
-                                                </li>
-
-                                                <li className="item-list">
-                                                    <a href="/quiz.html" className="list-link">
-                                                        <span className="icons">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <g
-                                                                    stroke="#292929"
-                                                                    strokeLinecap="round"
-                                                                    strokeLinejoin="round"
-                                                                    strokeWidth="2"
-                                                                >
-                                                                    <path
-                                                                        fill="#292929"
-                                                                        fillOpacity="0"
-                                                                        strokeDasharray="46"
-                                                                        d="M12 17h-3v-2.8c-1.79 -1.04 -3 -2.98 -3 -5.2c0 -3.31 2.69 -6 6 -6c3.31 0 6 2.69 6 6c0 2.22 -1.21 4.16 -3 5.2v2.8Z"
-                                                                    />
-                                                                </g>
-                                                            </svg>
-                                                        </span>
-                                                        <span className="titles">Quiz</span>
-                                                    </a>
-                                                </li>
-
-                                                <li className="item-list">
-                                                    <a
-                                                        href="assignment_dashboard.html"
-                                                        className="list-link active"
-                                                    >
-                                                        <span className="icons">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <path
-                                                                    fill="currentColor"
-                                                                    d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9c.561 0 1.068-.231 1.431-.603l.587.157a2 2 0 0 0 2.45-1.414l2.587-9.66a2 2 0 0 0-1.414-2.449L16 6.055V5a2 2 0 0 0-2-2z"
-                                                                />
-                                                            </svg>
-                                                        </span>
-                                                        <span className="titles">My Assignment</span>
-                                                    </a>
-                                                </li>
-
-                                                <li className="item-list">
-                                                    <a
-                                                        href="progress_dashboard.html"
-                                                        className="list-link"
-                                                    >
-                                                        <span className="titles">Progress</span>
-                                                    </a>
-                                                </li>
-
-                                                <li className="item-list">
-                                                    <a
-                                                        href="calender_dashboard.html"
-                                                        className="list-link"
-                                                    >
-                                                        <span className="titles">Calender</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div className="other-menu">
-                                            <h3 className="title3">OTHER MENU</h3>
-
-                                            <ul className="nav-item">
-                                                <li className="item-list">
-                                                    <a href="" className="list-link">
-                                                        <span className="icons">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <path
-                                                                    fill="currentColor"
-                                                                    d="M11.95 18q.525 0 .888-.363t.362-.887t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362m-.9-3.85h1.85q0-.825.188-1.3t1.062-1.3q.65-.65 1.025-1.238T15.55 8.9q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75T8.55 8.55l1.65.65q.125-.45.563-.975T12.1 7.7q.8 0 1.2.438t.4.962q0 .5-.3.938t-.75.812q-1.1.975-1.35 1.475t-.25 1.825M12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"
-                                                                />
-                                                            </svg>
-                                                        </span>
-                                                        <span className="titles">Help Centre</span>
-                                                    </a>
-                                                </li>
-
-                                                <li className="item-list">
-                                                    <a href="" className="list-link">
-                                                        <span className="icons">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="24"
-                                                                height="24"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <path
-                                                                    fill="currentColor"
-                                                                    fillRule="evenodd"
-                                                                    d="M14.208 4.83q.68.21 1.3.54l1.833-1.1a1 1 0 0 1 1.221.15l1.018 1.018a1 1 0 0 1 .15 1.221l-1.1 1.833q.33.62.54 1.3l2.073.519a1 1 0 0 1 .757.97v1.438a1 1 0 0 1-.757.97l-2.073.519q-.21.68-.54 1.3l1.1 1.833a1 1 0 0 1-.15 1.221l-1.018 1.018a1 1 0 0 1-1.221.15l-1.833-1.1q-.62.33-1.3.54l-.519 2.073a1 1 0 0 1-.97.757h-1.438a1 1 0 0 1-.97-.757l-.519-2.073a7.5 7.5 0 0 1-1.3-.54l-1.833 1.1a1 1 0 0 1-1.221-.15L4.42 18.562a1 1 0 0 1-.15-1.221l1.1-1.833a7.5 7.5 0 0 1-.54-1.3l-2.073-.519A1 1 0 0 1 2 12.72v-1.438a1 1 0 0 1 .757-.97l2.073-.519q.21-.68.54-1.3L4.27 6.66a1 1 0 0 1 .15-1.221L5.438 4.42a1 1 0 0 1 1.221-.15l1.833 1.1q.62-.33 1.3-.54l.519-2.073A1 1 0 0 1 11.28 2h1.438a1 1 0 0 1 .97.757zM12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8"
-                                                                />
-                                                            </svg>
-                                                        </span>
-                                                        <span className="titles">Settings</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <div className="navBar-end">
-                                            <button className="logout-btn">
-                                                <span>
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="24"
-                                                        height="24"
-                                                        viewBox="0 0 24 24"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"
-                                                        />
-                                                    </svg>
-                                                </span>
-                                                <span className="titles">Logout</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </nav>
-                            </aside>
+                            <Sidebar />
                         </div>
 
                         {/* ===================== MAIN CONTENT START ===================== */}
@@ -241,63 +28,63 @@ const AssignmentDashboard = () => {
                                         <h1 className="title1">Assignments</h1>
                                         <p>Dashboard / Assignment</p>
                                     </div>
-
                                     <ul className="hdr-menu d-flex align-items-center">
-                                        <li className="button-list">
-                                            <button
-                                                className="menu-btn"
-                                                onClick={hamberger}
-                                            >
-                                                <button class="menu-btn" onclick="hamberger()">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="24"
-                                                        height="24"
-                                                        viewBox="0 0 24 24"
-                                                    >
-                                                        <path
-                                                            fill="none"
-                                                            stroke="currentColor"
-                                                            stroke-width="1.5"
-                                                            d="M2 18c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 14 4.46 14 6 14s2.31 0 2.876.347c.317.194.583.46.777.777C10 15.689 10 16.46 10 18s0 2.31-.347 2.877c-.194.316-.46.582-.777.776C8.311 22 7.54 22 6 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C2 20.31 2 19.54 2 18Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 14 16.46 14 18 14s2.31 0 2.877.347c.316.194.582.46.776.777C22 15.689 22 16.46 22 18s0 2.31-.347 2.877a2.36 2.36 0 0 1-.776.776C20.31 22 19.54 22 18 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C14 20.31 14 19.54 14 18ZM2 6c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 2 4.46 2 6 2s2.31 0 2.876.347c.317.194.583.46.777.777C10 3.689 10 4.46 10 6s0 2.31-.347 2.876c-.194.317-.46.583-.777.777C8.311 10 7.54 10 6 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C2 8.311 2 7.54 2 6Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 2 16.46 2 18 2s2.31 0 2.877.347c.316.194.582.46.776.777C22 3.689 22 4.46 22 6s0 2.31-.347 2.876c-.194.317-.46.583-.776.777C20.31 10 19.54 10 18 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C14 8.311 14 7.54 14 6Z"
-                                                        />
-                                                    </svg>
-                                                </button>
+                                        <li>
+                                            <button className="menu-btn" onClick={hamberger}>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width={24}
+                                                    height={24}
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        strokeWidth={1.5}
+                                                        d="M2 18c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 14 4.46 14 6 14s2.31 0 2.876.347c.317.194.583.46.777.777C10 15.689 10 16.46 10 18s0 2.31-.347 2.877c-.194.316-.46.582-.777.776C8.311 22 7.54 22 6 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C2 20.31 2 19.54 2 18Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 14 16.46 14 18 14s2.31 0 2.877.347c.316.194.582.46.776.777C22 15.689 22 16.46 22 18s0 2.31-.347 2.877a2.36 2.36 0 0 1-.776.776C20.31 22 19.54 22 18 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C14 20.31 14 19.54 14 18ZM2 6c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 2 4.46 2 6 2s2.31 0 2.876.347c.317.194.583.46.777.777C10 3.689 10 4.46 10 6s0 2.31-.347 2.876c-.194.317-.46.583-.777.777C8.311 10 7.54 10 6 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C2 8.311 2 7.54 2 6Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 2 16.46 2 18 2s2.31 0 2.877.347c.316.194.582.46.776.777C22 3.689 22 4.46 22 6s0 2.31-.347 2.876c-.194.317-.46.583-.776.777C20.31 10 19.54 10 18 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C14 8.311 14 7.54 14 6Z"
+                                                    />
+                                                </svg>
+
                                             </button>
                                         </li>
+
                                         <li className="button-list">
                                             <label className="switch">
+
+
                                                 <span className="sun">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 24 24"
-                                                    >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                         <g fill="#ffd43b">
-                                                            <circle cx="12" cy="12" r="5" />
+                                                            <circle r={5} cy={12} cx={12} />
+                                                            <path
+                                                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                                                            />
                                                         </g>
                                                     </svg>
                                                 </span>
 
+
                                                 <span className="moon">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 384 512"
-                                                    >
-                                                        <path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                        <path
+                                                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                                                        />
                                                     </svg>
                                                 </span>
 
                                                 <input type="checkbox" className="input" />
-                                                <span className="slider" />
+
+
+                                                <span className="slider"></span>
+
                                             </label>
                                         </li>
-
                                         <li className="button-list">
                                             <button className="bell-btn">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
-                                                    width="30"
-                                                    height="30"
+                                                    width={30}
+                                                    height={30}
                                                     viewBox="0 0 24 24"
                                                 >
                                                     <g
@@ -305,22 +92,58 @@ const AssignmentDashboard = () => {
                                                         stroke="#292929"
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
-                                                        strokeWidth="2"
+                                                        strokeWidth={2}
                                                     >
-                                                        <path d="M12 3v2" />
-                                                        <path d="M12 5c-3.31 0 -6 2.69 -6 6l0 6c-1 0 -2 1 -2 2h8M12 5c3.31 0 6 2.69 6 6l0 6c1 0 2 1 2 2h-8" />
-                                                        <path d="M10 20c0 1.1 0.9 2 2 2c1.1 0 2 -0.9 2 -2" />
+                                                        <path strokeDasharray="4" d="M12 3v2">
+                                                            <animate
+                                                                fill="freeze"
+                                                                attributeName="stroke-dashoffset"
+                                                                dur="0.2s"
+                                                                values="4;0"
+                                                            />
+                                                        </path>
+
+                                                        <path
+                                                            strokeDasharray="30"
+                                                            strokeDashoffset="30"
+                                                            d="M12 5c-3.31 0 -6 2.69 -6 6l0 6c-1 0 -2 1 -2 2h8M12 5c3.31 0 6 2.69 6 6l0 6c1 0 2 1 2 2h-8"
+                                                        >
+                                                            <animate
+                                                                fill="freeze"
+                                                                attributeName="stroke-dashoffset"
+                                                                begin="0.2s"
+                                                                dur="0.4s"
+                                                                to="0"
+                                                            />
+                                                        </path>
+
+                                                        <path
+                                                            strokeDasharray="10"
+                                                            strokeDashoffset="10"
+                                                            d="M10 20c0 1.1 0.9 2 2 2c1.1 0 2 -0.9 2 -2"
+                                                        >
+                                                            <animate
+                                                                fill="freeze"
+                                                                attributeName="stroke-dashoffset"
+                                                                begin="0.7s"
+                                                                dur="0.2s"
+                                                                to="0"
+                                                            />
+                                                        </path>
                                                     </g>
                                                 </svg>
                                             </button>
                                         </li>
 
-                                        <li className="button-list">
+                                        <li>
                                             <button className="user-btn rounded-circle">
                                                 <img src={userIcon} alt="user" />
                                             </button>
                                         </li>
                                     </ul>
+
+
+
                                 </div>
                             </div>
 

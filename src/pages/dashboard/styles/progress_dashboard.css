@@ -18,6 +18,10 @@
   --p-18px: clamp(1rem, 0.95rem + 0.6vw, 1.286rem);
   --p-16px: clamp(1rem, 0.95rem + 0.4vw, 1.143rem);
 }
+* {
+  font-family: var(--roboto) !important;
+}
+
 
 .col60 {
   width: 60%;
@@ -102,6 +106,9 @@
 .skill-box {
   padding: 26px;
   margin-block: 27px;
+ 
+  max-width: 900px;  
+  width: 100%;
 }
 
 .skill-box-wrpr {
@@ -357,8 +364,11 @@
     padding: 23px 60px 7px 26px;
   }
   .progress-bar-wrpr .title2 {
-    margin-bottom: 22px;
-  }
+  font-size: 20px !important;
+}
+.progress-bar-wrpr .title3 {
+  font-size: 20px !important;
+}
   .progress-bar-wrpr {
     margin-bottom: 30px;
   }
@@ -646,6 +656,8 @@
   .pro-course-card > .title2 {
     margin-block: 8px;
   }
+
+  
 
   .course-pro-amount {
     font-size: 18px;
@@ -1083,4 +1095,8 @@
   .total-box {
     padding: 10px;
   }
+}
+.pro-course-card .title2 {
+  font-size: 20px !important;
+  line-height: 1.2;
 }

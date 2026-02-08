@@ -431,6 +431,7 @@ Content Section
   border-radius: 20px;
 }
 
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
@@ -495,9 +496,14 @@ Content Section
 }
 
 .courseProgress-barBox {
-  margin: 20px 0;
+  margin: 15px 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-bottom: 0 !important;
+  /* margin-bottom: 10px; */
 
 }
+
 
 .progressBarBox-top {
   font-size: var(--p-16px);
@@ -606,6 +612,11 @@ Content Section
   margin-left: auto;
   height: 160px;
 }
+
+.gauge-wrapper svg {
+  overflow: visible;
+}
+
 
 #gaugeChart {
   width: 100% !important;

@@ -1,26 +1,58 @@
 import React, { useState, useEffect } from 'react';
+import Sidebar from './sidebar';
+import courseImg1 from "../../../assets/dashboard-assets/progress/pro-course-img1.png";
+import courseImg2 from "../../../assets/dashboard-assets/progress/pro-course-img2.png";
+import courseImg3 from "../../../assets/dashboard-assets/progress/pro-course-img3.png";
+
+import userIcon from "../../../assets/dashboard-assets/user-icon.png";
+import ProgressSvg from "./progressSvg";
+
+
+// import AxiosInstance from "../../../../api/axios/axios";
+// import { useNavigate } from "react-router-dom";
+
+
 
 const Progress = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [data, setData] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState("");
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch('https://sdlc3.onrender.com/api/dashboard/progress')
-      .then((res) => res.json())
-      .then((json) => {
-        setData(json.data || json);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("API Error:", err);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   const fetchProgress = async () => {
+  //     try {
+  //       const res = await AxiosInstance.get("/dashboard/progress");
 
-  const clickClose = () => console.log("Sidebar Closed");
-  const hamberger = () => console.log("Menu Toggle");
+  //       console.log("PROGRESS API RESPONSE 👉", res.data);
 
-  if (loading) return <div className="loading-state">Loading Full Dashboard...</div>;
+  //       setData(res.data.data);
+  //       setLoading(false);
+  //     } catch (err) {
+  //       console.error("PROGRESS API ERROR 👉", err.response?.data);
+
+  //       if (err.response?.status === 401) {
+  //         localStorage.removeItem("token");
+  //         localStorage.removeItem("user");
+  //         navigate("/login", { replace: true });
+  //         return;
+  //       }
+
+  //       setError(err.response?.data?.message || "Something went wrong");
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchProgress();
+  // }, [navigate]);
+
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>{error}</div>;
+  const hamberger = () => {
+    document.querySelector(".left-sideNav")?.classList.toggle("open");
+
+  };
+
 
   return (
     <main>
@@ -29,188 +61,678 @@ const Progress = () => {
           <div className="row align-items-stretch">
             {/* --- SIDEBAR --- */}
             <div className="col-2">
-              <aside className="left-sideNav bg-white z-3">
-                <button className="close-btn" onClick={clickClose}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
-                  </svg>
-                </button>
-                <nav className="navBar">
-                  <div className="brand-logo">
-                    <img src="/assets/dashboard-assets/logo-icon.png" alt="Logo" />
-                  </div>
-                  <div className="dashboard-navbar">
-                    <h2 className="title2 text-uppercase">Student Dashboard</h2>
-                    <div className="dashboardNav-list">
-                      <h3 className="title3">MAIN MENU</h3>
-                      <ul className="nav-item">
-                        <li className="item-list">
-                          <a href="main_dashboard.html" className="list-link">
-                            <span className="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6z" /></svg></span>
-                            <span className="titles">Dashboard</span>
-                          </a>
-                        </li>
-                        <li className="item-list">
-                          <a href="course_dashboard.html" className="list-link">
-                            <span className="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20z" /></svg></span>
-                            <span className="titles">My Course</span>
-                          </a>
-                        </li>
-                        <li className="item-list">
-                          <a href="/quiz.html" className="list-link">
-                            <span className="icons">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <g stroke="#292929" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-                                  <path fill="#292929" fillOpacity="0" d="M12 17h-3v-2.8c-1.79 -1.04 -3 -2.98 -3 -5.2c0 -3.31 2.69 -6 6 -6c3.31 0 6 2.69 6 6c0 2.22 -1.21 4.16 -3 5.2v2.8Z" />
-                                </g>
-                              </svg>
-                            </span>
-                            <span className="titles">Quiz</span>
-                          </a>
-                        </li>
-                        <li className="item-list">
-                          <a href="progress_dashboard.html" className="list-link active">
-                            <span className="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 15q.425 0 .738-.312t.312-.738t-.312-.737T14 12.9t-.737.313t-.313.737t.313.738T14 15M8 18q-.825 0-1.412-.587T6 16V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm-4 4q-.825 0-1.412-.587T2 20V6h2v14h14v2z" /></svg></span>
-                            <span className="titles">Progress</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="navBar-end">
-                    <button className="logout-btn">
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z" /></svg></span>
-                      <span className="titles">Logout</span>
-                    </button>
-                  </div>
-                </nav>
-              </aside>
+              <Sidebar />
             </div>
 
             {/* --- MAIN HEADER & CONTENT --- */}
             <div className="col-10">
-              <div className="dashboard-top bg-white d-flex align-items-center">
-                <div className="dashboard-hdr d-flex align-items-center justify-content-between w-100">
-                  <div className="hdr-cntn">
-                    <h1 className="title1">Progress</h1>
-                    <ul className="dahsboard-brdcrmb d-flex">
-                      <li><a href="main_dashboard.html" className="fw-light">Dashboard /</a></li>
-                      <li className="fw-light ms-1">Progress</li>
-                    </ul>
-                  </div>
-                  <ul className="hdr-menu d-flex align-items-center">
-                    <li className="button-list">
-                      <button className="menu-btn" onClick={hamberger}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeWidth="1.5" d="M2 18c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 14 4.46 14 6 14s2.31 0 2.876.347c.317.194.583.46.777.777C10 15.689 10 16.46 10 18s0 2.31-.347 2.877c-.194.316-.46.582-.777.776C8.311 22 7.54 22 6 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C2 20.31 2 19.54 2 18Z" /></svg>
-                      </button>
-                    </li>
-                    <li className="button-list">
-                      <label className="switch">
-                        <input type="checkbox" className="input" />
-                        <span className="slider"></span>
-                      </label>
-                    </li>
-                    <li className="button-list">
-                      <button className="bell-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                          <g fill="none" stroke="#292929" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-                            <path d="M12 3v2" /><path d="M12 5c-3.31 0-6 2.69-6 6l0 6c-1 0-2 1-2 2h8" />
-                          </g>
-                        </svg>
-                      </button>
-                    </li>
-                    <li className="button-list">
-                      <button className="user-btn rounded-circle">
-                        <img src="/assets/dashboard-assets/user-icon.png" alt="user" />
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+               <div className="dashboard-top bg-white d-flex align-items-center">
+                                              <div className="dashboard-hdr d-flex align-items-center justify-content-between flex-wrap w-100">
+                                                  <div className="hdr-cntn">
+                                                      <h1 className="title1">Progress</h1>
+                                                      <p>Dashboard / Progress</p>
+                                                  </div>
+                                                  <ul className="hdr-menu d-flex align-items-center">
+                                                      <li>
+                                                          <button className="menu-btn" onClick={hamberger}>
+                                                              <svg
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  width={24}
+                                                                  height={24}
+                                                                  viewBox="0 0 24 24"
+                                                              >
+                                                                  <path
+                                                                      fill="none"
+                                                                      stroke="currentColor"
+                                                                      strokeWidth={1.5}
+                                                                      d="M2 18c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 14 4.46 14 6 14s2.31 0 2.876.347c.317.194.583.46.777.777C10 15.689 10 16.46 10 18s0 2.31-.347 2.877c-.194.316-.46.582-.777.776C8.311 22 7.54 22 6 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C2 20.31 2 19.54 2 18Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 14 16.46 14 18 14s2.31 0 2.877.347c.316.194.582.46.776.777C22 15.689 22 16.46 22 18s0 2.31-.347 2.877a2.36 2.36 0 0 1-.776.776C20.31 22 19.54 22 18 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C14 20.31 14 19.54 14 18ZM2 6c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 2 4.46 2 6 2s2.31 0 2.876.347c.317.194.583.46.777.777C10 3.689 10 4.46 10 6s0 2.31-.347 2.876c-.194.317-.46.583-.777.777C8.311 10 7.54 10 6 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C2 8.311 2 7.54 2 6Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 2 16.46 2 18 2s2.31 0 2.877.347c.316.194.582.46.776.777C22 3.689 22 4.46 22 6s0 2.31-.347 2.876c-.194.317-.46.583-.776.777C20.31 10 19.54 10 18 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C14 8.311 14 7.54 14 6Z"
+                                                                  />
+                                                              </svg>
+              
+                                                          </button>
+                                                      </li>
+              
+                                                      <li className="button-list">
+                                                          <label className="switch">
+              
+              
+                                                              <span className="sun">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                                      <g fill="#ffd43b">
+                                                                          <circle r={5} cy={12} cx={12} />
+                                                                          <path
+                                                                              d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                                                                          />
+                                                                      </g>
+                                                                  </svg>
+                                                              </span>
+              
+              
+                                                              <span className="moon">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                                      <path
+                                                                          d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                                                                      />
+                                                                  </svg>
+                                                              </span>
+              
+                                                              <input type="checkbox" className="input" />
+              
+              
+                                                              <span className="slider"></span>
+              
+                                                          </label>
+                                                      </li>
+                                                      <li className="button-list">
+                                                          <button className="bell-btn">
+                                                              <svg
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  width={30}
+                                                                  height={30}
+                                                                  viewBox="0 0 24 24"
+                                                              >
+                                                                  <g
+                                                                      fill="none"
+                                                                      stroke="#292929"
+                                                                      strokeLinecap="round"
+                                                                      strokeLinejoin="round"
+                                                                      strokeWidth={2}
+                                                                  >
+                                                                      <path strokeDasharray="4" d="M12 3v2">
+                                                                          <animate
+                                                                              fill="freeze"
+                                                                              attributeName="stroke-dashoffset"
+                                                                              dur="0.2s"
+                                                                              values="4;0"
+                                                                          />
+                                                                      </path>
+              
+                                                                      <path
+                                                                          strokeDasharray="30"
+                                                                          strokeDashoffset="30"
+                                                                          d="M12 5c-3.31 0 -6 2.69 -6 6l0 6c-1 0 -2 1 -2 2h8M12 5c3.31 0 6 2.69 6 6l0 6c1 0 2 1 2 2h-8"
+                                                                      >
+                                                                          <animate
+                                                                              fill="freeze"
+                                                                              attributeName="stroke-dashoffset"
+                                                                              begin="0.2s"
+                                                                              dur="0.4s"
+                                                                              to="0"
+                                                                          />
+                                                                      </path>
+              
+                                                                      <path
+                                                                          strokeDasharray="10"
+                                                                          strokeDashoffset="10"
+                                                                          d="M10 20c0 1.1 0.9 2 2 2c1.1 0 2 -0.9 2 -2"
+                                                                      >
+                                                                          <animate
+                                                                              fill="freeze"
+                                                                              attributeName="stroke-dashoffset"
+                                                                              begin="0.7s"
+                                                                              dur="0.2s"
+                                                                              to="0"
+                                                                          />
+                                                                      </path>
+                                                                  </g>
+                                                              </svg>
+                                                          </button>
+                                                      </li>
+              
+                                                      <li>
+                                                          <button className="user-btn rounded-circle">
+                                                              <img src={userIcon} alt="user" />
+                                                          </button>
+                                                      </li>
+                                                  </ul>
+              
+              
+              
+                                              </div>
+                                          </div>
+              
+
+
 
               <div className="row">
                 <div className="col60">
                   <div className="row">
-                    {/* Weekly Goal Box */}
                     <div className="col-12">
                       <div className="pro-box goal-box">
                         <div className="pro-box-top">
-                          <h2 className="title3">Weekly Study Goal <span>{data?.weeklyGoal?.hours || 8} / 10 hrs</span></h2>
+                          <h2 className="title3">
+                            Weekly Study Goal <span>8 / 10 hrs</span>
+                          </h2>
                         </div>
-                        <div className="progress" role="progressbar">
-                          <div className="progress-bar bg-success" style={{width: `${data?.weeklyGoal?.percentage || 63}%`}}></div>
+
+                        <div
+                          className="progress"
+                          role="progressbar"
+                          aria-label="Success example"
+                          aria-valuenow={63}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        >
+                          <div
+                            className="progress-bar bg-success"
+                            style={{ width: "63%" }}
+                          ></div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Courses Box */}
+                    </div>
                     <div className="col-12">
                       <div className="pro-box course-box">
-                        <div className="pro-box-top"><h2 className="title3">My Current Courses</h2></div>
-                        <div className="pro-box-btm row">
-                          {data?.courses?.map((course, i) => (
-                            <div className="col-4" key={i}>
+                        <div className="pro-box-top">
+                          <h2 className="title3">My Current Courses</h2>
+                        </div>
+
+                        <div className="pro-box-btm">
+                          <div className="row">
+
+                            {/* Course 1 */}
+                            <div className="col-4">
                               <div className="pro-course-card">
                                 <div className="pro-course-img">
-                                  <img src={course.image || `/assets/dashboard-assets/progress/pro-course-img${i+1}.png`} alt="" />
+                                  <img src={courseImg1} alt="UI UX Design" />
+
                                 </div>
-                                <h3 className="title2">{course.name}</h3>
-                                <div className="course-pro-amount fw-semibold">{course.percentage}% <span>Completed</span></div>
-                                <div className="progress"><div className="progress-bar bg-success" style={{width: `${course.percentage}%`}}></div></div>
+
+                                <h3 className="title2">UI/UX Design</h3>
+
+                                <div className="course-pro-amount fw-semibold d-flex align-items-center">
+                                  65% <span>Completed</span>
+                                </div>
+
+                                <div
+                                  className="progress"
+                                  role="progressbar"
+                                  aria-valuenow={65}
+                                  aria-valuemin={0}
+                                  aria-valuemax={100}
+                                >
+                                  <div
+                                    className="progress-bar bg-success"
+                                    style={{ width: "65%" }}
+                                  ></div>
+                                </div>
                               </div>
                             </div>
-                          ))}
+
+                            {/* Course 2 */}
+                            <div className="col-4">
+                              <div className="pro-course-card">
+                                <div className="pro-course-img">
+                                  <img src={courseImg2} alt="Web Development" />
+
+                                </div>
+
+                                <h3 className="title2">Web Development</h3>
+
+                                <div className="course-pro-amount fw-semibold d-flex align-items-center">
+                                  45% <span>Completed</span>
+                                </div>
+
+                                <div
+                                  className="progress"
+                                  role="progressbar"
+                                  aria-valuenow={45}
+                                  aria-valuemin={0}
+                                  aria-valuemax={100}
+                                >
+                                  <div
+                                    className="progress-bar bg-success"
+                                    style={{ width: "45%" }}
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Course 3 */}
+                            <div className="col-4">
+                              <div className="pro-course-card">
+                                <div className="pro-course-img">
+                                  <img src={courseImg3} alt="Digital Marketing" />
+
+                                </div>
+
+                                <h3 className="title2">Digital Marketing</h3>
+
+                                <div className="course-pro-amount fw-semibold d-flex align-items-center">
+                                  100% <span>Completed</span>
+                                </div>
+
+                                <div
+                                  className="progress"
+                                  role="progressbar"
+                                  aria-valuenow={100}
+                                  aria-valuemin={0}
+                                  aria-valuemax={100}
+                                >
+                                  <div
+                                    className="progress-bar bg-success"
+                                    style={{ width: "100%" }}
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    {/* Skill Progress Box */}
                     <div className="col-12">
                       <div className="pro-box skill-box">
-                        <div className="pro-box-top"><h2 className="title3">Skill Progress</h2></div>
-                        {data?.skills?.map((skill, i) => (
-                          <div className="skill-box-wrpr d-flex align-items-center justify-content-between" key={i}>
-                            <div className="box-wrpr-left">
-                              <h2 className="title3 fw-medium text-uppercase">{skill.name}</h2>
-                              <div className="progress"><div className="progress-bar bg-success" style={{width: `${skill.percentage}%`}}></div></div>
-                            </div>
-                            <div className="box-wrpr-right text-center">
-                              <div className="course-pro-amount fw-semibold">{skill.percentage}% <span className="fw-medium">Completed</span></div>
+                        <div className="pro-box-top">
+                          <h2 className="title3">Skill Progress</h2>
+                        </div>
+
+                        <div className="skill-box-wrpr d-flex align-items-center justify-content-between">
+                          {/* LEFT */}
+                          <div className="box-wrpr-left">
+                            <h2 className="title3 fw-medium">UI/UX DESIGN</h2>
+
+                            <div
+                              className="progress"
+                              role="progressbar"
+                              aria-valuenow={65}
+                              aria-valuemin={0}
+                              aria-valuemax={100}
+                            >
+                              <div
+                                className="progress-bar bg-success"
+                                style={{ width: "65%" }}
+                              />
                             </div>
                           </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                {/* --- RIGHT COLUMN (col40) --- */}
-                <div className="col40">
-                  <div className="pro-box learning-box">
-                    <div className="pro-box-top"><h2 className="title3">Overall Progress</h2></div>
-                    <div className="learning-box-mid text-center">
-                      <div className="progress-ring">
-                        <div className="progress-inner">
-                          <h2 className="learning-percent">75%</h2>
-                          <span></span>
-                          <p>Average Score</p>
+                          {/* RIGHT */}
+                          <div className="box-wrpr-right text-center">
+                            <div className="course-pro-amount fw-semibold d-flex flex-column">
+                              65% <span className="fw-medium">Completed</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* BOTTOM */}
+                        <div className="skill-box-btm d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          {/* IT SKILL */}
+                          <div className="skill-btm-left d-flex align-items-center">
+                            {/* <svg
+      width={30}
+      height={30}
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <rect width={30} height={30} rx={5} fill="#097877" />
+
+      <rect
+        x={6}
+        y={6}
+        width={18}
+        height={18}
+        fill="url(#pattern0_4699_4065)"
+      />
+
+      <defs>
+        <pattern
+          id="pattern0_4699_4065"
+          patternContentUnits="objectBoundingBox"
+          width={1}
+          height={1}
+        >
+          <use
+            xlinkHref="#image0_4699_4065"
+            transform="scale(0.00195312)"
+          />
+        </pattern>
+
+        <image
+          id="image0_4699_4065"
+          width={512}
+          height={512}
+          preserveAspectRatio="none"
+          xlinkHref="data:image/png;base64,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"
+        />
+      </defs>
+    </svg> */}
+
+                            <ProgressSvg />
+
+                            <p>IT Skill</p>
+
+                            <div
+                              className="progress"
+                              role="progressbar"
+                              aria-valuenow={56.7}
+                              aria-valuemin={0}
+                              aria-valuemax={100}
+                            >
+                              <div
+                                className="progress-bar"
+                                style={{ width: "56.7%" }}
+                              />
+                            </div>
+                          </div>
+
+                          {/* NON-IT SKILL */}
+                          <div className="skill-btm-right d-flex align-items-center">
+
+                            <ProgressSvg />
+                            <p className="ms-2 mb-0">Non-IT Skill</p>
+                            <div
+                              className="progress"
+                              role="progressbar"
+                              aria-valuenow={56.7}
+                              aria-valuemin={0}
+                              aria-valuemax={100}
+                            >
+                              <div
+                                className="progress-bar"
+                                style={{ width: "56.7%" }}
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="learning-box-end">
-                      <h3 className="sec-hdr">Detailed Analytics</h3>
-                      <div className="progress-bar-wrpr">
-                        <p className="title2">Theoretical Knowledge</p>
-                        <div className="progress"><div className="progress-bar bg-info" style={{width: '80%'}}></div></div>
-                      </div>
-                      <div className="progress-bar-wrpr">
-                        <p className="title2">Practical Application</p>
-                        <div className="progress"><div className="progress-bar bg-warning" style={{width: '65%'}}></div></div>
+
+
+
+                    <div className="col-6">
+                      <div className="pro-box lessons-box">
+                        <div className="pro-box-top">
+                          <h2 className="title3">Upcoming Lessons</h2>
+                        </div>
+
+                        <div className="pro-box-btm">
+                          <ul className="list-unstyled">
+                            {/* Lesson 1 */}
+                            <li>
+                              <svg
+                                width="38"
+                                height="33"
+                                viewBox="0 0 38 33"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                              >
+                                <rect width="37.3103" height="33" rx="5" fill="#097877" />
+                                <rect
+                                  x="6.10352"
+                                  y="6.94775"
+                                  width="25.1046"
+                                  height="25.1046"
+                                  fill="url(#patternLesson1)"
+                                />
+                                <defs>
+                                  <pattern
+                                    id="patternLesson1"
+                                    patternContentUnits="objectBoundingBox"
+                                    width="1"
+                                    height="1"
+                                  >
+                                    <use
+                                      xlinkHref="#imageLesson1"
+                                      transform="scale(0.00195312)"
+                                    />
+                                  </pattern>
+                                  <image
+                                    id="imageLesson1"
+                                    width="512"
+                                    height="512"
+                                    preserveAspectRatio="none"
+                                    xlinkHref="data:image/png;base64,...."
+                                  />
+                                </defs>
+                              </svg>
+                              Advanced Prototyping
+                            </li>
+
+                            {/* Lesson 2 */}
+                            <li className="mb-0">
+                              <svg
+                                width="38"
+                                height="33"
+                                viewBox="0 0 38 33"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                              >
+                                <rect width="37.3103" height="33" rx="5" fill="#097877" />
+                                <rect
+                                  x="6.10352"
+                                  y="6.94775"
+                                  width="25.1046"
+                                  height="25.1046"
+                                  fill="url(#patternLesson2)"
+                                />
+                                <defs>
+                                  <pattern
+                                    id="patternLesson2"
+                                    patternContentUnits="objectBoundingBox"
+                                    width="1"
+                                    height="1"
+                                  >
+                                    <use
+                                      xlinkHref="#imageLesson2"
+                                      transform="scale(0.00195312)"
+                                    />
+                                  </pattern>
+                                  <image
+                                    id="imageLesson2"
+                                    width="512"
+                                    height="512"
+                                    preserveAspectRatio="none"
+                                    xlinkHref="data:image/png;base64,...."
+                                  />
+                                </defs>
+                              </svg>
+                              SEO Fundamentals
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
+
+
+                    <div className="col-6">
+                      <div className="pro-box lessons-box activity-box">
+                        <div className="pro-box-top">
+                          <h2 className="title3">Recent Activity</h2>
+                        </div>
+
+                        <div className="pro-box-btm">
+                          <ul className="list-unstyled">
+
+                            {/* Activity 1 */}
+                            <li className="fw-semibold">
+                              <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 40 40"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                              >
+                                <circle cx="20" cy="20" r="20" fill="#097877" />
+                                <rect
+                                  x="5"
+                                  y="7"
+                                  width="30"
+                                  height="30"
+                                  fill="url(#activityPattern1)"
+                                />
+                                <defs>
+                                  <pattern
+                                    id="activityPattern1"
+                                    patternContentUnits="objectBoundingBox"
+                                    width="1"
+                                    height="1"
+                                  >
+                                    <use
+                                      xlinkHref="#activityImage1"
+                                      transform="scale(0.00195312)"
+                                    />
+                                  </pattern>
+                                  <image
+                                    id="activityImage1"
+                                    width="512"
+                                    height="512"
+                                    preserveAspectRatio="none"
+                                    xlinkHref="data:image/png;base64,...."
+                                  />
+                                </defs>
+                              </svg>
+
+                              Completed <span>“Responsive Design”</span>
+                            </li>
+
+                            {/* Activity 2 */}
+                            <li className="mb-0 fw-semibold">
+                              <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 40 40"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                              >
+                                <circle cx="20" cy="20" r="20" fill="#FE7E0F" />
+                                <rect
+                                  x="5"
+                                  y="7"
+                                  width="30"
+                                  height="30"
+                                  fill="url(#activityPattern2)"
+                                />
+                                <defs>
+                                  <pattern
+                                    id="activityPattern2"
+                                    patternContentUnits="objectBoundingBox"
+                                    width="1"
+                                    height="1"
+                                  >
+                                    <use
+                                      xlinkHref="#activityImage2"
+                                      transform="scale(0.00195312)"
+                                    />
+                                  </pattern>
+                                  <image
+                                    id="activityImage2"
+                                    width="512"
+                                    height="512"
+                                    preserveAspectRatio="none"
+                                    xlinkHref="data:image/png;base64,...."
+                                  />
+                                </defs>
+                              </svg>
+
+                              Passed <span>“Javascript Quiz”</span>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+
+
                   </div>
                 </div>
+                <div className="col40">
+                  <div className="row">
+
+                    {/* Total Courses */}
+                    <div className="col-12">
+                      <div className="pro-box total-box">
+                        <div className="pro-box-top">
+                          <h2 className="title3">Total Courses Completed</h2>
+                        </div>
+                        <h2 className="title3">12 Courses</h2>
+                      </div>
+                    </div>
+
+                    {/* Learning Progress */}
+                    <div className="col-12">
+                      <div className="pro-box learning-box">
+                        <div className="pro-box-top">
+                          <h2 className="title3">Learning Progress</h2>
+                        </div>
+
+                        <div className="learning-box-mid text-center">
+                          <div className="progress-ring">
+                            <div className="progress-inner">
+                              <div className="learning-percent fw-medium">78%</div>
+                              <span></span>
+                            </div>
+                          </div>
+                          <p>Overall Progress</p>
+                        </div>
+
+                        <div className="learning-box-end">
+                          <h2 className="sec-hdr fw-bold">Upcoming Course</h2>
+
+                          {/* Course 1 */}
+                          <div className="progress-bar-wrpr">
+                            <h2 className="title2">Web Development</h2>
+                            <div className="progress-bar-value d-flex align-items-center">
+                              <div
+                                className="progress"
+                                role="progressbar"
+                                aria-valuenow={0}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                              ></div>
+                              <span className="title3">0%</span>
+                            </div>
+                          </div>
+
+                          {/* Course 2 */}
+                          <div className="progress-bar-wrpr">
+                            <h2 className="title2">UI & UX Designing</h2>
+                            <div className="progress-bar-value d-flex align-items-center">
+                              <div
+                                className="progress"
+                                role="progressbar"
+                                aria-valuenow={0}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                              ></div>
+                              <span className="title3">0%</span>
+                            </div>
+                          </div>
+
+                          {/* Course 3 */}
+                          <div className="progress-bar-wrpr mb-0">
+                            <h2 className="title2">Digital Marketing</h2>
+                            <div className="progress-bar-value d-flex align-items-center">
+                              <div
+                                className="progress"
+                                role="progressbar"
+                                aria-valuenow={0}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                              ></div>
+                              <span className="title3">0%</span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
               </div>
+
+
+
             </div>
           </div>
         </div>

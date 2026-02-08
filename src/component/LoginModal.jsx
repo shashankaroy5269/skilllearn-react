@@ -47,7 +47,7 @@ const LoginPage = () => {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      navigate("/dashboard", { replace: true });
+      navigate("/afterlogin", { replace: true });
 
     } catch (error) {
       console.error("LOGIN ERROR 👉", error.response?.data);

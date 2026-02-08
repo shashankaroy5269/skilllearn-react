@@ -1,173 +1,186 @@
+/* ================= ROOT ================= */
 :root {
-    --body-bg: radial-gradient(circle at bottom left,
-            rgba(8, 17, 155, 1) 0%,
-            rgba(8, 17, 155, 1) 10%,
-            rgba(108, 205, 191, 0.58) 60%,
-            rgba(108, 205, 191, 0.58) 100%);
-    --primary-color: #100f0f;
-    --secondary-color: #097877;
-    --tertiary-color: #d9d9d9;
-    --default-color: #ffffff;
-    --roboto: "Roboto", sans-serif;
-    --h1-40px: clamp(1.5rem, 2vw, 2.857rem);
-    --h2-24px: clamp(1.2rem, 2.8vw, 1.714rem);
-    --h3-20px: clamp(1rem, 1.5vw, 1.429rem);
-    --p-20px: clamp(1rem, 0.95rem + 0.6vw, 1.429rem);
-    --p-18px: clamp(1rem, 0.95rem + 0.6vw, 1.286rem);
-    --p-16px: clamp(1rem, 0.95rem + 0.4vw, 1.143rem);
-    --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    --date-color: #F3EEEE;
+  --primary-color: #100f0f;
+  --secondary-color: #097877;
+  --default-color: #ffffff;
+  --date-color: #F3EEEE;
+  --box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  --p-18px: clamp(1rem, 0.95rem + 0.6vw, 1.286rem);
 }
 
-html,
-body {
-    color: var(--primary-color);
-}
-
-.title5 {
-    font-size: 1.1rem;
-}
-
-/* Calender Section */
-.left-sideNav {
-    min-height: auto;
-}
-
+/* ================= COMMON ================= */
 .common-box {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .dateBox {
-    border-bottom: 1px solid #989797;
-    padding-bottom: 20px;
+  border-bottom: 1px solid #989797;
+  padding-bottom: 20px;
 }
 
 .dateTIme {
-    font-size: var(--p-18px);
-    color: #989797;
+  font-size: var(--p-18px);
+  color: #989797;
 }
 
+/* ================= TOP BAR ================= */
 
 .calender-top {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .changeBtn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #F3EEEE;
-    box-shadow: var(--box-shadow);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--date-color);
+  box-shadow: var(--box-shadow);
+  border: none;
+  cursor: pointer;
 }
 
+/* ================= CALENDAR GRID ================= */
 .calender-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: clamp(10px, 2vw, 20px);
-    padding: 10px clamp(12px, 3vw, 24px);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: clamp(10px, 2vw, 20px);
+  padding: 10px clamp(12px, 3vw, 24px);
 }
 
-.day,
-.date {
-    background: var(--date-color);
-    min-height: 80px;
-    box-shadow: var(--box-shadow);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--p-18px);
-    text-transform: capitalize;
-    font-weight: 500;
-}
-
+/* ================= DAY HEADER ================= */
 .day {
-    font-weight: bold;
+  background: var(--date-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--p-18px);
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
+/* ================= DATE CELL ================= */
+.date {
+  background: var(--date-color);
+  min-height: 80px;
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--p-18px);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ================= DATE STATES ================= */
+
+/* Upcoming Class */
+.date.classColor1 {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* Current / Today */
+.date.classColor2 {
+  background: var(--date-color);
+  border: 3px solid var(--secondary-color);
+  font-weight: 700;
+}
+
+/* Completed Class */
+.date.classColor3 {
+  background: #A9D0D0;
+}
+
+/* Disabled (Prev / Next Month Dates) */
+.date.classColor4 {
+  background: var(--date-color);
+  color: #989797;
+  box-shadow: inset var(--box-shadow);
+}
+
+/* ================= INDICATION ================= */
 .indication-list {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .indication-colorList {
-    margin-right: 20px;
-    margin-top: 15px;
-    font-size: 0.9rem;
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+/* .indication-list .title5 {
+  margin-top: -6px;
 }
 
-.indication-colorList:last-child {
-    margin-right: 0;
-}
+.indication-list .indication {
+  margin-top: -6px;
+} */
+
 
 
 .indication-colorList span:first-child {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    margin-right: 5px;
-    box-shadow: inset var(--box-shadow);
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  margin-right: 5px;
+  box-shadow: inset var(--box-shadow);
 }
 
 .color1 span:first-child {
-    background-color: var(--secondary-color);
-
+  background-color: var(--secondary-color);
 }
 
 .color2 span:first-child {
-    background-color: var(--date-color);
-    border: 3px solid var(--secondary-color);
-
+  background-color: var(--date-color);
+  border: 3px solid var(--secondary-color);
 }
 
 .color3 span:first-child {
-    background-color: #A9D0D0;
+  background-color: #A9D0D0;
 }
 
-.date.classColor1 {
-    background: var(--secondary-color);
-    color: #fff;
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 992px) {
+  .day,
+  .date {
+    font-size: 0.8rem;
+    border-radius: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .date {
+    min-height: auto;
+  }
+}
+.dashboard-hdr h1.title1 {
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 4px !important;
+  font-family: var(--roboto) !important;
+}
+
+.dashboard-hdr p {
+  font-size: 18px !important;
+  margin: 0 !important;
+  color: #131212 !important;
+  margin-left: 15px !important;
+  
+}
+
+.menu-btn {
     
+    
+  transform: translateX(-15px);
 }
 
-.date.classColor2 {
-    background: var(--date-color);
-    border: 3px solid var(--secondary-color);
-    font-weight: 700;
-}
 
-.date.classColor3 {
-    background: #A9D0D0;
-}
-
-.date.classColor4 {
-    background: var(--date-color);
-    color: #989797;
-    box-shadow: inset var(--box-shadow);
-}
-
-@media screen and (max-width:1600px) {
-    .left-sideNav {
-        min-height: 100vh;
-    }
-}
-
-@media screen and (max-width:992px) {
-
-
-
-
-    .day,
-    .date {
-        font-size: 0.8rem;
-        border-radius: 12px;
-    }
-}
-
-@media screen and (max-width:768px) {
-
-
-    .day,
-    .date {
-        min-height: auto;
-    }
-}
