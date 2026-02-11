@@ -1,9 +1,9 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: var(--roboto) !important;
-    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto) !important;
+
 }
 
 
@@ -59,25 +59,30 @@ body {
 }
 
 .course-card {
-   max-width: 486px;
-    height: 400px;
+    max-width: 486px;
+    min-height: 400px;   /* fixed height না */
     position: relative;
     border-radius: 20px;
-
+    overflow: hidden;    /* extra text বের হলে hide করবে */
 }
+
 
 
 .courseCard-cntn {
     background: var(--default-color);
     position: absolute;
     bottom: 0;
+    left: 0;              /* 👈 এটা যোগ করো */
     width: 100%;
-    padding: 10px 15px;  
+    padding: 15px;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 
+
+
 .card-hdr p {
-    
+
     font-size: var(--p-20px);
     font-weight: bold;
     color: #B20606;
@@ -93,6 +98,8 @@ body {
 
 .card-bottom>p {
     font-size: var(--p-16px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .course-swiper {
@@ -110,9 +117,11 @@ body {
     height: 180px;
 
 }
+
 .courseCard-cntn .title2 {
-  font-size: 20px !important;   /* এটা নিশ্চিত ছোট হবে */
-  
+    font-size: 20px !important;
+   
+
 }
 
 
