@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/AutoScrollSection.css';
+import './AutoScrollSection.css';
 
 import img1 from '../../assets/AboutUsPage/Auto-scroll-img1.png';
 import img2 from '../../assets/AboutUsPage/Auto-scroll-img2.png';

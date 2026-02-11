@@ -15,7 +15,7 @@ const Home = () => {
   
   return (
     <>
-    <BackToTop/>
+      <BackToTop/>
       <Banner />
       <AboutSection />
       <CourseSection />

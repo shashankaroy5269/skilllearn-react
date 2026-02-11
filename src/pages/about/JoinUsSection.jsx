@@ -1,7 +1,7 @@
 import React from 'react';
-import './style/JoinUsSection.css';
+import './JoinUsSection.css';
 
-// Images Import
+
 import cardImg1 from '../../assets/AboutUsPage/join-card-img1.png';
 import cardImg2 from '../../assets/AboutUsPage/join-card-img2.png';
 import cardImg3 from '../../assets/AboutUsPage/join-card-img3.png';

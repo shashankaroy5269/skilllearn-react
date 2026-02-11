@@ -66,10 +66,10 @@ const BrowseSection = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      {/* Background */}
+                      
                       <circle cx="28" cy="28" r="28" fill="#097877" />
 
-                      {/* Mask */}
+                     
                       <mask
                         id="mask0"
                         maskUnits="userSpaceOnUse"

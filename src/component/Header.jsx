@@ -8,14 +8,12 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
 
-          {/* LOGO */}
+
           <div className="nav-logo">
             <Link className="navbar-brand" to="/">
               <img src={logo} alt="Logo" />
             </Link>
           </div>
-
-          {/*  TOGGLER  */}
           <button
             className="navbar-toggler ms-auto"
             type="button"
@@ -27,8 +25,6 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
-          {/*  OFFCANVAS */}
           <div
             className="offcanvas offcanvas-end align-items-center"
             id="navbarSupportedContent"
@@ -41,7 +37,7 @@ const Header = () => {
               <i className="fa-solid fa-xmark"></i>
             </button>
 
-            {/*  MENU  */}
+
             <ul className="navbar-nav mx-auto">
 
               <li className="nav-item">
@@ -51,33 +47,23 @@ const Header = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/aboutus">
+                <Link className="nav-link" to="/about">
                   About Us
                 </Link>
               </li>
 
 
               <li className="nav-item">
-                <Link className="nav-link" to="#">
-                 Courses
+                <Link className="nav-link" to="quiz">
+                 Quiz
                 </Link>
               </li>
 
-
-              <li className="nav-item dropdown">
-                <Link
-            
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Quiz
+              <li className="nav-item">
+                <Link className="nav-link" to="/course">
+                  Course
                 </Link>
-                
               </li>
-
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">
                   Contact

@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
-// Swiper standard styles
+
 import "swiper/css";
 import "swiper/css/pagination";
-import "./style/TutorSection.css";
+import "./TutorSection.css";
 
-// Images Import
+
 import tutor1 from "../../assets/AboutUsPage/Tutor-img1.png";
 import tutor2 from "../../assets/AboutUsPage/Tutor-img2.png";
 import tutor3 from "../../assets/AboutUsPage/Tutor-img3.png";
 import tutor4 from "../../assets/AboutUsPage/Tutor-img4.png";
 
 const TutorSection = () => {
-  // 8 objects ka data array taki 8 buttons (dots) niche dikhein
+  
   const [tutorData] = useState([
     { id: 1, name: "Emma Scorsese", role: "3D Animation", img: tutor1 },
     { id: 2, name: "John Deo", role: "HTML Designer", img: tutor2 },
@@ -43,8 +43,8 @@ const TutorSection = () => {
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
-          slidesPerView={4} // Ek baar me 4 card dikhenge
-          slidesPerGroup={1} // 1 slide move hogi taki 8 dots bane
+          slidesPerView={4} 
+          slidesPerGroup={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{

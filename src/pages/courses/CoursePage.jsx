@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Course.css";
 import studentsImg from "../../assets/CoursePage/students.png";
@@ -8,6 +9,7 @@ import webImg from "../../assets/CoursePage/web.png";
 import historyImg from "../../assets/CoursePage/history.png";
 import sqlImg from "../../assets/CoursePage/sql.png";
 
+
 const CoursePage = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,6 +17,7 @@ const CoursePage = () => {
   const [category, setCategory] = useState("ALL");
   const [level, setLevel] = useState("ALL");
   const [cost, setCost] = useState("ALL");
+  const navigate = useNavigate();
 
   // API Integration
   useEffect(() => {
@@ -54,9 +57,12 @@ const CoursePage = () => {
 
     return matchCategory && matchSearch && matchCost && matchLevel;
   });
+  const handleAddToCart = () => {
+    navigate('/cart'); 
+  };
   return (
     <>
-      
+     
       <main>
         <section className="course-cntn-sec">
           <div className="about-about-hdr">
@@ -129,14 +135,17 @@ const CoursePage = () => {
                             <div className="course-card">
                               {/* Top Image Section */}
                               <div className="card-pic position-relative">
+                                <Link to={`/course/${course._id}`}>
                                 <img
                                   src={
                                     course.thumbnail ||
-                                    "./assets/CoursePage/1st-card.png"
+                                    "../../assets/CoursePage/1st-card.png"
                                   }
                                   alt={course.title}
                                   className="img-fluid"
-                                />
+                                style={{ cursor: "pointer" }}
+  />
+</Link>
                                 <span className="course-badge1 position-absolute">
                                   01 Jan To 15 Mar
                                 </span>
@@ -234,9 +243,12 @@ const CoursePage = () => {
                                       </del>
                                     )}
                                   </div>
-                                  <button className="cart ms-auto d-flex align-items-center">
-                                    <span>Add to cart</span>
-                                  </button>
+                                  <button 
+  className="cart ms-auto d-flex align-items-center" 
+  onClick={() => navigate('/cart')} // Direct navigate call
+>
+  <span>Add to cart</span>
+</button>
                                 </div>
                               </div>
                             </div>

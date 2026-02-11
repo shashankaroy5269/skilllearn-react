@@ -5,6 +5,7 @@ import aboutImg1 from "../assets/LandingPage/About-img1.png";
 import aboutImg2 from "../assets/LandingPage/About-img2.png";
 import aboutDesign3 from "../assets/LandingPage/About-design3.png";
 import aboutDesign4 from "../assets/LandingPage/about-design4.png";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -144,7 +145,7 @@ const AboutSection = () => {
 
             {/* BUTTON */}
             <div className="banner-btn">
-              <a href="#" className="btn-secondary section-btn">
+              <Link to="about" className="btn-secondary section-btn">
                 Know More
                 <span
                     class="d-flex align-items-center justify-content-center"
@@ -163,7 +164,7 @@ const AboutSection = () => {
                         fill="black"
                       />
                     </svg> </span>
-              </a>
+              </Link>
 
             </div>
           </div>

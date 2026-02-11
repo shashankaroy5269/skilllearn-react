@@ -1,9 +1,18 @@
 
 
 import Home from "./pages/Home";
-// import QuizSection from "./pages/Quiz";
-import Contact from "./pages/contact";
-import AboutSection from "./pages/AboutUs";
+
+import AboutUs from './pages/about/AboutUs';
+import Contact from './pages/contact/Contact';
+import CourseDetailsPage from './pages/courseDetails/CourseDetails';
+import CoursePage from './pages/courses/CoursePage';
+import Quiz from "./pages/quiz/quiz";
+import QuizQuestion from './pages/quiz/QuizQuestion';
+import QuizOverview from './pages/quiz/QuizOverview';
+import QuizCompleted from './pages/quiz/QuizCompleted';
+import Cart from './pages/courses/Cart';
+import Payment from './pages/courses/Payment';
+
 import Register from "./pages/auth/register/register";
 import StudentRegisterModal from "./pages/auth/register/StudentRegisterModal";
 import TeacherRegisterModal from "./pages/auth/register/teacherRegisterModal";
@@ -16,7 +25,6 @@ import DashboardCourses from "./pages/dashboard/components/Course";
 import MainLayout from "./layout/mainLayout";
 import DashboardLayout from "./layout/dashboardLayout";
 import Progress from "./pages/dashboard/components/Progress";
-import CourseSection from "./component/courseSection";
 import LiveClass from "./pages/dashboard/components/LiveClass";
 import AfterLoginHomePage from "./component/afterLoginHomePage/afterLoginHomePage";
 import React, { useEffect, useState } from "react";
@@ -42,11 +50,18 @@ function App() {
       
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<AboutSection />} />
-        <Route path="/courseSection" element={<CourseSection />} />
 
-        {/* <Route path="/quiz" element={<QuizSection />} /> */}
+       <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/course" element={<CoursePage />} />
+        <Route path="/course/:id" element={<CourseDetailsPage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/question" element={<QuizQuestion />} />
+        <Route path="/quiz/overview" element={<QuizOverview />} />
+        <Route path="/quiz/completed" element={<QuizCompleted />} />
+
         <Route path="/register" element={<Register />} />
         <Route path="/student-register" element={<StudentRegisterModal />} />
         <Route path="/teacher-register" element={<TeacherRegisterModal />} />
@@ -64,7 +79,7 @@ function App() {
         <Route path="/afterlogin" element={<AfterLoginHomePage />} />
       </Route>
     </Routes>
-    {/* )} */}
+    
   </>
           
   );

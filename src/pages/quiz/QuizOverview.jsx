@@ -49,7 +49,7 @@ const QuizOverview = () => {
 
   return (
     <>
-      
+     
       <main className="main-content">
         {/* Banner Section */}
         <section
@@ -89,11 +89,12 @@ const QuizOverview = () => {
                   
                 </div>
               </div>
-              <div className="breadcrumb-box ">
-    {/* Style attribute ko React object format mein likha gaya hai */}
+
+              {/* <div className="breadcrumb-box ">
+    
     <nav style={{ "--bs-breadcrumb-divider": "'>'" }} aria-label="breadcrumb">
         <ol className="breadcrumb flex-nowrap text-nowrap">
-            {/* href ki jagah 'to' ka use karein */}
+            
             <li className="breadcrumb-item">
                 <Link to="/" className="text-decoration-none">Home</Link>
             </li>
@@ -105,7 +106,7 @@ const QuizOverview = () => {
             </li>
         </ol>
     </nav>
-</div>
+</div> */}
             </div>
           </div>
         </section>
@@ -456,7 +457,7 @@ const QuizOverview = () => {
             </div>
         </section>
       </main>
-      
+     
     </>
   );
 };

@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import "./Cart.css";
 import cartThumb from "../../assets/AddtoCart/Cart-left-img.png";
-import Polygon1 from "../../assets/LandingPage/Polygon1.png";
-import Polygon4 from "../../assets/LandingPage/Polygon4.png";
+// import Polygon1 from "../../assets/LandingPage/Polygon1.png";
+// import Polygon4 from "../../assets/LandingPage/Polygon4.png";
 import card1 from '../../assets/CoursePage/1st-card.png';
 import card2 from '../../assets/CoursePage/2nd-card.png';
 import card3 from '../../assets/CoursePage/3rd-card.png';
@@ -19,8 +19,10 @@ import cartDesign from '../../assets/AddtoCart/Cart-design.png';
 import bookIcon from '../../assets/CoursePage/book.png';
 import studentsIcon from '../../assets/CoursePage/students.png';
 import authorPic from '../../assets/CoursePage/round-pic.png';
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -57,17 +59,21 @@ const CartPage = () => {
     (acc, item) => acc + item.originalPrice,
     0,
   );
+  const handleCheckout = () => {
+    navigate('/payment'); 
+  };
   const totalDiscount = originalTotal - subtotal;
+  
 
   return (
     <main>
     <section className="cart-sec">
-      <div className="bgPolygon bgPolygon4">
+      {/* <div className="bgPolygon bgPolygon4">
         <img src={Polygon1} alt="" />
       </div>
       <div className="bgPolygon bgPolygon5">
         <img src={Polygon4} alt="" />
-      </div>
+      </div> */}
       <div className="card-eclipse-1"></div>
 
       <div className="container">
@@ -191,7 +197,7 @@ const CartPage = () => {
               </div>
 
               <div className="cart-btn-sec mt-3">
-                <button className="checkout-btn fw-bold text-white border-0">
+                <button className="checkout-btn fw-bold text-white border-0" onClick={handleCheckout}>
                   Proceed to Checkout
                   <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
                     <path

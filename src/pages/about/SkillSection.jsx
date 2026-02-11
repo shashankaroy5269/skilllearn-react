@@ -1,7 +1,7 @@
 import React from "react";
-import "./style/SkillSection.css";
+import "./SkillSection.css";
 
-// Image imports (Correct paths for: client\src\pages\about\AboutUs.jsx)
+
 import SkillImg1 from "../../assets/AboutUsPage/Skill-img1.png";
 import SkillImg2 from "../../assets/AboutUsPage/Skill-img2.png";
 import SkillBoxImg from "../../assets/AboutUsPage/Skill-box-img.png";

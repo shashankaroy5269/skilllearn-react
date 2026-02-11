@@ -21,7 +21,8 @@
 
 .course-cntn-sec {
   background: #dbf7f3;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
+  
 }
 
 /* Category Buttons */
@@ -59,20 +60,28 @@
   background: var(--defult-color);
   margin-bottom: 30px;
   padding: 25px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth Pop Animation */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  margin-top: 40px;
 }
 
 .course-card:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   transform: translateY(-10px); /* Hover Animation */
 }
+.card-pic {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 
 .card-pic img {
+  display: block;     
   width: 100%;
-  border-radius: 10px;
+  height: 255px;      
   object-fit: cover;
-  height: 220px;
 }
+
 
 /* Badges */
 .course-badge1, .course-badge2, .course-badge3 {
@@ -109,6 +118,42 @@
   font-size: 14px;
   margin-left: 5px;
   color: #525252;
+}
+
+.course-card {
+  overflow: hidden;
+}
+
+.card-cntn {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.price-cart {
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.card-cntn .title4 {
+  word-break: break-word;
+}
+.course-card {
+  min-height: 600px;   
+  display: flex;
+  flex-direction: column;
+}
+
+.card-cntn {
+  flex: 1;            
+  display: flex;
+  flex-direction: column;
+}
+
+.price-cart {
+  margin-top: auto;   
 }
 
 /* Cart Button Animation */

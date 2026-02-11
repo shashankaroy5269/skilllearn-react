@@ -2,18 +2,16 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-// Swiper styles
+
 import "swiper/css";
 import "swiper/css/navigation";
-import "./style/TestimonialSection.css";
+import "./TestimonialSection.css";
 
-
-// Images Import
 import quoteImg from "../../assets/AboutUsPage/quote.png";
 import userImg from "../../assets/AboutUsPage/Tutor-img4.png";
 
 const TestimonialSection = () => {
-  // Feedback data state mein break kiya hai
+  
   const [feedbacks] = useState([
     {
       id: 1,

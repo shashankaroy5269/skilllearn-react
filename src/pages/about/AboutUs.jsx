@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style/AboutUs.css";
+import "./AboutUs.css";
 
 
 import Feature1 from "../../assets/AboutUsPage/Feature-box1.png";
@@ -9,6 +9,12 @@ import Feature4 from "../../assets/AboutUsPage/Feature-box4.png";
 import AboutMainImg from "../../assets/AboutUsPage/About-img.jpg";
 import PlayBtn from "../../assets/AboutUsPage/Play-btn.png";
 import TutorThumb from "../../assets/AboutUsPage/About-rec-img.png";
+import SkillSection from "./SkillSection";
+import TutorSection from "./TutorSection";
+import TestimonialSection from "./TestimonialSection";
+import AutoScrollSection from "./AutoScrollSection";
+import JoinUsSection from "./JoinUsSection";
+
 
 const AboutUs = () => {
   
@@ -30,7 +36,7 @@ const AboutUs = () => {
     <main>
      
     <section className="about-about-sec">
-      
+      {/* Breadcrumb Header */}
       <div className="about-about-hdr">
         <div className="container">
           <ul className="list-unstyled d-flex mb-0">
@@ -43,13 +49,13 @@ const AboutUs = () => {
       <div className="about-about-wrpr">
         <div className="container">
           <div className="row align-items-center">
-            
+            {/* Left Side: Main Image and Floating Cards */}
             <div className="col-12 col-lg-7">
               <div className="about-about-img-wrpr">
                 <div className="about-about-img mx-auto">
                   <img src={AboutMainImg} alt="Student" />
                   
-                  
+                  {/* Floating Box 1: Stats */}
                   <div className="about-about-img-rec1 d-flex align-items-center">
                     <img src={PlayBtn} alt="Play" />
                     <div className="rec1-cntn">
@@ -58,7 +64,7 @@ const AboutUs = () => {
                     </div>
                   </div>
 
-                 
+                  {/* Floating Box 2: Tutor Profile */}
                   <div className="about-about-img-rec2 text-center">
                     <img src={TutorThumb} alt="Tutor" />
                     <div className="rec-hdr fw-semibold">{stats.tutorName}</div>
@@ -80,7 +86,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            
+            {/* Right Side: Text and Grid */}
             <div className="col-12 col-lg-5">
               <div className="about-about-cntn">
                 <div className="about-about-heading">
@@ -128,12 +134,12 @@ const AboutUs = () => {
         </div>
       </div>
     </section>
-    {/* <SkillSection/>
+    <SkillSection/>
     <TutorSection/>
     <TestimonialSection/>
     <AutoScrollSection/>
     <JoinUsSection/>
-    <Footer1/> */}
+   
     </main>
     
   );

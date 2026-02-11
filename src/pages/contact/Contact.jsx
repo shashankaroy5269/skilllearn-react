@@ -2,7 +2,6 @@ import React from 'react';
 import './Contact.css';
 
 
-
 // Assets imports - paths according to your structure
 import contactImg from '../../assets/ContactusPage/Contact-img.png';
 
@@ -10,7 +9,7 @@ import contactImg from '../../assets/ContactusPage/Contact-img.png';
 const ContactPage = () => {
   return (
     <main>
-     
+      
       {/* Contact Section */}
       <section className="contact-sec">
         <div className="container">
@@ -168,7 +167,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-     
+      
     </main>
   );
 };

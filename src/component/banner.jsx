@@ -57,7 +57,7 @@ const Banner = () => {
             </p>
 
             <div className="banner-btn">
-              <Link to="" className="btn-secondary section-btn">
+              <Link to="/register" className="btn-secondary section-btn">
                 Enroll Now
                 <span className="d-flex align-items-center justify-content-center">
                   <svg
@@ -77,9 +77,9 @@ const Banner = () => {
                 </span>
               </Link>
 
-              <a href="" className="btn-secondary btn-tertiary">
+              <Link to="" className="btn-secondary btn-tertiary">
                 Learn More
-              </a>
+              </Link>
             </div>
 
             <div className="reviews d-flex align-items-center">

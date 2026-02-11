@@ -57,7 +57,7 @@ ul {
   overflow: hidden;
 }
 
-/* Curtains */
+
 .loader-overlay::before {
   content: "";
   position: absolute;
@@ -68,7 +68,7 @@ ul {
   z-index: 1;
 }
 
-/* Content stays above curtains */
+
 .loader-content {
   position: relative;
   z-index: 2;
@@ -81,12 +81,12 @@ ul {
     transform 0.6s ease;
 }
 
-/* Curtain animation trigger */
+
 .loader-overlay.curtain-up::before {
   transform: translateY(-100%);
 }
 
-/* Hide loader content with curtain */
+
 .loader-overlay.curtain-up .loader-content {
   opacity: 0;
   transform: translateY(-30px) scale(0.8);
@@ -234,17 +234,16 @@ ul {
 }
 .title1 {
   font-family: "Playfair Display", serif;
-  /* font-size: clamp(90px, 8vw, 130px); */
+  font-size: clamp(38px, 8vw, 60px) !important;
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.8px;
   color: #000;
 
-  margin-left: 18px;
-
+  margin-left: 12px;
   max-width: 1000px; 
   min-height: auto;    
-  font-size: 55px !important;
+  
   
 }
 
@@ -292,6 +291,11 @@ ul {
   max-width: 1340px;
 }
 
+.banner-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;   
+}
 
 .btn-primary {
   color: var(--defult-color);
@@ -302,11 +306,12 @@ ul {
 
 .btn-secondary {
   color: var(--defult-color);
-  padding: 10.5px 20px;
-  background: var(--secondary-color);
+  padding: 10.5px 20px ;
+  background: var(--btn-bg);
   border-radius: 20px;
   
 }
+
 
 .btn-primary,
 .btn-secondary {
@@ -317,7 +322,7 @@ ul {
   &:hover {
     transform: scale(0.9);
     outline: 2px solid var(--border-color);
-    box-shadow: 4px 5px 17px -4px var(--secondary-color);
+    box-shadow: 4px 5px 17px -4px var(--secondary-color) ;
   }
 }
 
@@ -340,25 +345,23 @@ ul {
   background: var(--btn-bg);
 }
 
-.btn-tertiary::before {
-  background-color: var(--border-color);
-}
-
 .btn-primary:hover::before,
 .btn-secondary:hover::before {
   width: 250%;
 }
-
+.btn-tertiary::before {
+  background-color: var(--border-color) ;
+}
 .btn-tertiary {
+ .btn-tertiary {
   background-color: transparent;
   border: 2px solid var(--secondary-color);
   color: var(--secondary-color);
-  padding: 15px 30.5px;
+  padding: 13px 20px;  
   border-radius: 20px;
-  margin-left: 6px;
-  transition: all 1000ms;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
 
   &:hover {
     color: var(--defult-color);
@@ -382,7 +385,7 @@ ul {
   margin-left: 6px;
   z-index: 1;
   position: relative;
-  top: -21px;
+  
 }
 
 .section-btn::after {
@@ -742,8 +745,15 @@ ul {
   
   transform: scale(0.95);      
   transform-origin: center;
-  margin-top: -50px;
+  margin-top: -30px;
   margin-left: 90px;
+}
+@media (max-width: 768px) {
+  .title1 {
+    margin-top: 0;        
+    margin-left: 0;      
+    text-align: center;   
+  }
 }
 
 .banner-img-top {
@@ -1189,7 +1199,11 @@ select:focus {
 
 .brows-card-btn>.btn-secondary {
   border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
+
 
 .brows-card-btn svg {
   transition: all 0.3s linear;

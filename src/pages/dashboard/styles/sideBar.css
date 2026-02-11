@@ -1,18 +1,40 @@
 .dashboard-navbar .title2 {
-  font-size: 22px !important;   
+  font-size: 22px !important;
   font-weight: 600;
+  white-space: nowrap;
 }
+
+
 .list-link {
   display: flex;
   align-items: center;
 }
 
 .list-link .titles {
-  margin-left: 10px;   /* যতটা ডানদিকে চাও */
+  margin-left: 10px;
 }
+
+
+@media (max-width: 991px) {
+  .dashboard-navbar .title2 {
+    font-size: 18px !important;
+  }
+}
+
 
 @media (max-width: 576px) {
   .dashboard-navbar .title2 {
-    font-size: 13px;
+    font-size: 14px !important;
+  }
+
+  .list-link .titles {
+    margin-left: 6px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .dashboard-navbar .title2 {
+    font-size: 12px !important;
   }
 }
